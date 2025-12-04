@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linh — Portfolio</title>
+    <style>
+        :root {
+            --main-color: #4f46e5;
+            --text-color: #333;
+            --bg-light: #f9f9f9;
+            --white: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI", sans-serif;
+            color: var(--text-color);
+            background: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 80px;
+            color: #fff;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+
+            .hero h1 {
+                font-size: 56px;
+                font-weight: bold;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+                max-width: 600px;
+                margin-top: 15px;
+            }
+
+            .hero .btn-group {
+                margin-top: 40px;
+                display: flex;
+                gap: 20px;
+            }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            font-weight: 500;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            }
+
+        section h3 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-img {
+            height: 350px;
+            border-radius: 14px;
+            background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
+            overflow: hidden;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+        .card-img {
+            height: 160px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h4 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .contact {
+            background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+            color: white;
+            padding: 80px 20px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+
+            .contact a {
+                text-decoration: underline;
+                color: white;
+            }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>Hello, I'm Linh 👋</h1>
+        <h2>Data Analytics Manager — Datamart design, dashboards, business insights & AI-powered analytics</h2>
+        <div class="btn-group">
+            <a href="#projects" class="btn">View My Work</a>
+            <a href="#contact" class="btn" style="background: rgba(255,255,255,0.2); border: 1px solid #fff;">Contact Me</a>
+        </div>
+    </section>
+
+    <section class="container" id="about">
+        <h3>About Me</h3>
+        <div class="about">
+            <div>
+                <p>I'm a Data Analytics Manager focusing on datamart design, end-to-end analytics, dashboard systems, and AI applications to optimize business decision-making. I lead a talented team of analysts and build scalable data solutions.</p>
+            </div>
+            <div class="about-img"></div>
+        </div>
+    </section>
+
+    <section class="container" id="projects">
+        <h3>Featured Projects</h3>
+        <div class="projects-grid">
+            <div class="card">
+                <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1564866657318-e4077ac614b0?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="card-content">
+                    <h4>Datamart Design</h4>
+                    <p>Designed datamarts for enterprise-level dashboards and analytics workloads.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1581090464777-41cf0e5f4421?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="card-content">
+                    <h4>Insights & Reporting</h4>
+                    <p>Automated reporting systems for operations, sales, logistics, and customer analytics.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="card-content">
+                    <h4>AI Applications</h4>
+                    <p>Developed customer support chatbots and analytics chatbots using N8N & Dify.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="awards">
+        <h3>Awards & Recognition 🏅</h3>
+        <div style="border-left: 3px solid var(--main-color); padding-left: 20px; margin-top: 40px;">
+            <div style="margin-bottom: 25px;">
+                <strong>2020</strong> – 🏆 <strong>Scientific Research Contest for Students in Vietnam</strong><br />
+                <small>Second Prize (National-level). Recognized for outstanding academic research and innovative methodology in applied data analysis.</small>
+            </div>
+            <div style="margin-bottom: 25px;">
+                <strong>2019</strong> – 🥉 <strong>EUREKA Scientific Research Contest</strong><br />
+                <small>Third Prize. Awarded for a practical, high-impact research project addressing business intelligence in Vietnam.</small>
+            </div>
+            <div style="margin-bottom: 25px;">
+                <strong>2019</strong> – 🎓 <strong>Scientific Research Contest of FTU</strong><br />
+                <small>Honored for exceptional contributions to research within Foreign Trade University.</small>
+            </div>
+            <div style="margin-bottom: 25px;">
+                <strong>2018 & 2019</strong> – 🌟 <strong>Student of 5 Merits – Ha Noi City</strong><br />
+                <small>Prestigious award for excellence in academic performance, ethics, volunteerism, integration, and physical training.</small>
+            </div>
+            <div style="margin-bottom: 25px;">
+                <strong>2018</strong> – 🧮 <strong>Olympiad Advanced Mathematics Contest</strong><br />
+                <small>Second Prize. Acknowledged for strong mathematical thinking in a city-wide advanced mathematics competition.</small>
+            </div>
+            <div style="margin-bottom: 25px;">
+                <strong>2017</strong> – 🌺 <strong>Poinsettias Awards</strong><br />
+                <small>Recognized as one of the top-performing students nationwide in academic and extracurricular excellence.</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="demo">
+        <h3>Demo Gallery</h3>
+        <div class="projects-grid">
+            <div class="card">
+                <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="card-content">
+                    <h4><a href="dashboards.html">Dashboards</a></h4>
+                    <p>Business dashboards (Sales, Logistics, Customer, Finance) built with Power BI, Superset, Google Data Studio.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1586864387783-e0b7d4953d4f?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="card-content">
+                    <h4>Posters & Visual Reports</h4>
+                    <p>Infographics and reports designed with Figma & Canva for storytelling and presentations.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1590642914612-4f9b3f0b6f19?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="card-content">
+                    <h4>Logos & Branding</h4>
+                    <p>Brand identity systems, banners, and visuals crafted with Figma.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:linhpi9999@gmail.com">linhpi9999@gmail.com</a></p>
+            <p>Facebook: <a href="#">facebook.com/yourprofile</a></p>
+            <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+            <p>TikTok: <a href="#">tiktok.com/@yourprofile</a></p>
+        </div>
+    </section>
+
+</body>
+</html>
+
