@@ -1,0 +1,157 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dashboard Gallery</title>
+    <style>
+        :root {
+        --main-color: #0f172a;
+        --accent-color: #0ea5e9;
+        --bg-light: #f1f5f9;
+        --white: #ffffff;
+        --text-color: #1e293b;
+        }
+
+        body {
+        font-family: 'Segoe UI', sans-serif;
+        background: var(--bg-light);
+        margin: 0;
+        padding: 0;
+        color: var(--text-color);
+        }
+
+        .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 80px 20px;
+        }
+
+        h1 {
+        text-align: center;
+        font-size: 40px;
+        color: var(--main-color);
+        margin-bottom: 60px;
+        font-weight: 700;
+        }
+
+        .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        }
+
+        .card {
+        background: var(--white);
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        }
+
+        .card-body {
+        padding: 20px 24px 30px;
+        }
+
+        .card-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--main-color);
+        }
+
+        .card-desc {
+        font-size: 15px;
+        color: #475569;
+        line-height: 1.6;
+        min-height: 60px;
+        }
+
+        .card-link {
+        display: inline-block;
+        margin-top: 18px;
+        font-size: 15px;
+        color: var(--accent-color);
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        }
+
+        .card-link:hover {
+        color: #0284c7;
+        text-decoration: underline;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="container">
+        <h1>📊 My Dashboard Projects</h1>
+        <div class="grid">
+        <div class="card">
+            <img src="images/customer-dashboard.png" alt="Customer Analytics Dashboard">
+            <div class="card-body">
+            <div class="card-title">Customer Analytics Dashboard</div>
+            <div class="card-desc">Track user engagement, acquisition channels, and behavioral funnels in real time.</div>
+            <a href="#" class="card-link">View Full Dashboard →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/business-overview.png" alt="Business Performance Overview">
+            <div class="card-body">
+            <div class="card-title">Business Performance Overview</div>
+            <div class="card-desc">Summarizes KPIs, revenue trends, and department-level performance metrics.</div>
+            <a href="#" class="card-link">View Full Dashboard →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/product-intelligence.png" alt="Product Intelligence Dashboard">
+            <div class="card-body">
+            <div class="card-title">Product Intelligence Dashboard</div>
+            <div class="card-desc">Understand feature adoption, retention cohorts, and usage by segment.</div>
+            <a href="#" class="card-link">View Full Dashboard →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/marketing-campaign.png" alt="Marketing Campaign Dashboard">
+            <div class="card-body">
+            <div class="card-title">Marketing Campaign Dashboard</div>
+            <div class="card-desc">Monitor campaign ROI, conversion rates, and multi-channel performance.</div>
+            <a href="#" class="card-link">View Full Dashboard →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/financial-summary.png" alt="Financial Summary Dashboard">
+            <div class="card-body">
+            <div class="card-title">Financial Summary Dashboard</div>
+            <div class="card-desc">Overview of expenses, revenue, profit margins, and budget tracking.</div>
+            <a href="#" class="card-link">View Full Dashboard →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/operations-monitor.png" alt="Operations Monitoring Dashboard">
+            <div class="card-body">
+            <div class="card-title">Operations Monitoring Dashboard</div>
+            <div class="card-desc">Track operational efficiency, inventory movement, and SLA compliance.</div>
+            <a href="#" class="card-link">View Full Dashboard →</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </body>
+    </html>
