@@ -92,6 +92,25 @@
         color: #0284c7;
         text-decoration: underline;
         }
+
+        dialog::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+        }
+
+        dialog {
+        max-width: 90vw;
+        border: none;
+        border-radius: 10px;
+        padding: 0;
+        overflow: hidden;
+        }
+
+        .modal-content img {
+        width: 100%;
+        display: block;
+        max-height: 90vh;
+        object-fit: contain;
+        }
     </style>
     </head>
     <body>
@@ -99,11 +118,11 @@
         <h1>📊 My Dashboard Projects</h1>
         <div class="grid">
         <div class="card">
-            <img src="images/customer-dashboard.png" alt="Customer Analytics Dashboard">
+            <img src="images/project-management-dashboard-pic.png" alt="Project Management Dashboard">
             <div class="card-body">
-            <div class="card-title">Customer Analytics Dashboard</div>
+            <div class="card-title">Project Management Dashboard</div>
             <div class="card-desc">Track user engagement, acquisition channels, and behavioral funnels in real time.</div>
-            <a href="#" class="card-link">View Full Dashboard →</a>
+            <a href="https://docs.google.com/spreadsheets/d/1FTJtTsELXQKorrqumjCvG6V9DGvWEQ3_oHq7Gd4IhB4/edit?gid=13369317#gid=13369317" class="card-link" target="_blank">View Full Dashboard →</a>
             </div>
         </div>
 
@@ -112,7 +131,7 @@
             <div class="card-body">
             <div class="card-title">Business Performance Overview</div>
             <div class="card-desc">Summarizes KPIs, revenue trends, and department-level performance metrics.</div>
-            <a href="#" class="card-link">View Full Dashboard →</a>
+            <a href="#" class="card-link" onclick="showImage('images/business-overview.png')">View Full Dashboard →</a>
             </div>
         </div>
 
@@ -121,7 +140,7 @@
             <div class="card-body">
             <div class="card-title">Product Intelligence Dashboard</div>
             <div class="card-desc">Understand feature adoption, retention cohorts, and usage by segment.</div>
-            <a href="#" class="card-link">View Full Dashboard →</a>
+            <a href="#" class="card-link" onclick="showImage('images/product-intelligence.png')">View Full Dashboard →</a>
             </div>
         </div>
 
@@ -130,7 +149,7 @@
             <div class="card-body">
             <div class="card-title">Marketing Campaign Dashboard</div>
             <div class="card-desc">Monitor campaign ROI, conversion rates, and multi-channel performance.</div>
-            <a href="#" class="card-link">View Full Dashboard →</a>
+            <a href="#" class="card-link" onclick="showImage('images/marketing-campaign.png')">View Full Dashboard →</a>
             </div>
         </div>
 
@@ -139,7 +158,7 @@
             <div class="card-body">
             <div class="card-title">Financial Summary Dashboard</div>
             <div class="card-desc">Overview of expenses, revenue, profit margins, and budget tracking.</div>
-            <a href="#" class="card-link">View Full Dashboard →</a>
+            <a href="#" class="card-link" onclick="showImage('images/financial-summary.png')">View Full Dashboard →</a>
             </div>
         </div>
 
@@ -148,10 +167,28 @@
             <div class="card-body">
             <div class="card-title">Operations Monitoring Dashboard</div>
             <div class="card-desc">Track operational efficiency, inventory movement, and SLA compliance.</div>
-            <a href="#" class="card-link">View Full Dashboard →</a>
+            <a href="#" class="card-link" onclick="showImage('images/operations-monitor.png')">View Full Dashboard →</a>
             </div>
         </div>
         </div>
     </div>
+
+    <dialog id="modal">
+        <div class="modal-content">
+        <img id="modal-image" src="" alt="Dashboard Preview">
+        </div>
+    </dialog>
+
+    <script>
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-image");
+
+        function showImage(src) {
+        modalImg.src = src;
+        modal.showModal();
+        }
+
+        modal.addEventListener("click", () => modal.close());
+    </script>
     </body>
     </html>
