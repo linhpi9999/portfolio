@@ -98,6 +98,56 @@
             background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
         }
 
+        .about blockquote {
+            font-style: italic;
+            background: var(--quote-bg);
+            border-left: 6px solid var(--main-color);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+            color: #444;
+            font-size: 18px;
+        }
+        .about ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .about ul li {
+            margin-bottom: 8px;
+        }
+
+
+        .awards-list {
+            display: grid;
+            gap: 24px;
+            background: var(--award-bg);
+            border-left: 4px solid var(--main-color);
+            padding: 40px 30px;
+            border-radius: 12px;
+        }
+
+        .award-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .award-item .year {
+            font-weight: bold;
+            color: var(--main-color);
+        }
+
+        .award-item .title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .award-item .desc {
+            font-size: 15px;
+            color: #555;
+        }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -227,31 +277,37 @@
 
     <section class="container" id="awards">
         <h3>Awards & Recognition 🏅</h3>
-        <div style="border-left: 3px solid var(--main-color); padding-left: 20px; margin-top: 40px;">
-            <div style="margin-bottom: 25px;">
-                <strong>2020</strong> – 🏆 <strong>Scientific Research Contest for Students in Vietnam</strong><br />
-                <small>Second Prize (National-level). Recognized for outstanding academic research and innovative methodology in applied data analysis.</small>
-            </div>
-            <div style="margin-bottom: 25px;">
-                <strong>2019</strong> – 🥉 <strong>EUREKA Scientific Research Contest</strong><br />
-                <small>Third Prize. Awarded for a practical, high-impact research project addressing business intelligence in Vietnam.</small>
-            </div>
-            <div style="margin-bottom: 25px;">
-                <strong>2019</strong> – 🎓 <strong>Scientific Research Contest of FTU</strong><br />
-                <small>Honored for exceptional contributions to research within Foreign Trade University.</small>
-            </div>
-            <div style="margin-bottom: 25px;">
-                <strong>2018 & 2019</strong> – 🌟 <strong>Student of 5 Merits – Ha Noi City</strong><br />
-                <small>Prestigious award for excellence in academic performance, ethics, volunteerism, integration, and physical training.</small>
-            </div>
-            <div style="margin-bottom: 25px;">
-                <strong>2018</strong> – 🧮 <strong>Olympiad Advanced Mathematics Contest</strong><br />
-                <small>Second Prize. Acknowledged for strong mathematical thinking in a city-wide advanced mathematics competition.</small>
-            </div>
-            <div style="margin-bottom: 25px;">
-                <strong>2017</strong> – 🌺 <strong>Poinsettias Awards</strong><br />
-                <small>Recognized as one of the top-performing students nationwide in academic and extracurricular excellence.</small>
-            </div>
+        <div class="awards-list">
+        <div class="award-item">
+            <span class="year">2020</span>
+            <span class="title">🏆 Scientific Research Contest for Students in Vietnam</span>
+            <span class="desc">Second Prize (National-level). Recognized for outstanding academic research and innovative methodology in applied data analysis.</span>
+        </div>
+        <div class="award-item">
+            <span class="year">2019</span>
+            <span class="title">🥉 EUREKA Scientific Research Contest</span>
+            <span class="desc">Third Prize. Awarded for a practical, high-impact research project addressing business intelligence in Vietnam.</span>
+        </div>
+        <div class="award-item">
+            <span class="year">2019</span>
+            <span class="title">🎓 Scientific Research Contest of FTU</span>
+            <span class="desc">Honored for exceptional contributions to research within Foreign Trade University.</span>
+        </div>
+        <div class="award-item">
+            <span class="year">2018 & 2019</span>
+            <span class="title">🌟 Student of 5 Merits – Ha Noi City</span>
+            <span class="desc">Prestigious award for excellence in academic performance, ethics, volunteerism, integration, and physical training.</span>
+        </div>
+        <div class="award-item">
+            <span class="year">2018</span>
+            <span class="title">🧮 Olympiad Advanced Mathematics Contest</span>
+            <span class="desc">Second Prize. Acknowledged for strong mathematical thinking in a city-wide advanced mathematics competition.</span>
+        </div>
+        <div class="award-item">
+            <span class="year">2017</span>
+            <span class="title">🌺 Poinsettias Awards</span>
+            <span class="desc">Recognized as one of the top-performing students nationwide in academic and extracurricular excellence.</span>
+        </div>
         </div>
     </section>
 
