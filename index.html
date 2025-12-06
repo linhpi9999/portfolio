@@ -183,7 +183,7 @@
         }
 
         .contact {
-            background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+            background: url('images/background-contact.jpg') center/cover no-repeat;
             color: white;
             padding: 80px 20px;
             text-shadow: 0 4px 20px rgba(0,0,0,0.6);
@@ -194,6 +194,39 @@
                 color: white;
             }
 
+        .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+        }
+
+        .contact-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(6px);
+        border-radius: 14px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+        transform: translateY(-5px);
+        }
+
+        .contact-card .icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 12px;
+        }
+
+        .contact-card a {
+        color: #ffffff;
+        text-decoration: underline;
+        word-break: break-all;
+        }
+    
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 40px;
@@ -262,8 +295,8 @@
             <div class="card">
                 <div class="card-img" style="background-image:url('images/poster.png');"></div>
                 <div class="card-content">
-                    <h4>Posters & Visual Reports</h4>
-                    <p>Infographics and reports designed with Figma & Canva for storytelling and presentations.</p>
+                    <h4>Infographics</h4>
+                    <p>Infographics and reports designed for storytelling and presentations.</p>
                 </div>
             </div>
             <div class="card">
@@ -341,17 +374,28 @@
     
 
     <section class="contact" id="contact">
-        <div class="container">
-            <h3>Contact</h3>
-            <p>Email: <a href="mailto:linhpi9999@gmail.com">linhpi9999@gmail.com</a></p>
-            <p>Facebook: <a href="#">facebook.com/yourprofile</a></p>
-            <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
-            <p>TikTok: <a href="#">tiktok.com/@yourprofile</a></p>
+    <div class="container">
+        <h3>Contact</h3>
+        <div class="contact-grid">
+        <div class="contact-card">
+            <img src="images/gmail-icon.jpg" alt="Email Icon" class="icon">
+            <p><strong>Email:</strong><br><a href="mailto:linhpi9999@gmail.com">linhpi9999@gmail.com</a></p>
         </div>
-    </section>
-    <div>
-
+        <div class="contact-card">
+            <img src="images/facebook_icon.png" alt="Facebook Icon" class="icon">
+            <p><strong>Facebook:</strong><br><a href="https://facebook.com/yourprofile" target="_blank">facebook.com/yourprofile</a></p>
+        </div>
+        <div class="contact-card">
+            <img src="images/LinkedIn_icon.png" alt="LinkedIn Icon" class="icon">
+            <p><strong>LinkedIn:</strong><br><a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+        </div>
+        <div class="contact-card">
+            <img src="images/tiktok-icon.png" alt="TikTok Icon" class="icon">
+            <p><strong>TikTok:</strong><br><a href="https://tiktok.com/@yourprofile" target="_blank">tiktok.com/@yourprofile</a></p>
+        </div>
+        </div>
     </div>
+    </section>
 </body>
 </html>
 
