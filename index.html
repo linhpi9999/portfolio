@@ -84,7 +84,84 @@
             font-size: 32px;
             margin-bottom: 30px;
         }
+        /* ===== EDUCATION SECTION ===== */
+        .edu-section {
+            padding: 80px 20px;
+            margin-top: 80px;
+        }
 
+        .edu-title {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* GRID */
+        .edu-grid {
+            display: grid;
+            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        /* CARD */
+        .edu-card {
+            background: rgba(255, 255, 255, 0.28);
+            backdrop-filter: blur(8px);
+            padding: 32px 36px;
+            border-radius: 14px;
+            border-left: 6px solid var(--main-color);
+            position: relative;
+            transition: 0.3s ease;
+        }
+
+        .edu-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        /* ICON */
+        .edu-icon {
+            margin-bottom: 15px;
+        }
+
+        /* TITLE + BADGE */
+        .edu-degree {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .edu-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff3bf;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            width: fit-content;
+            color: #b45309;
+            border: 1px solid #facc15;
+        }
+
+        /* SCHOOL + LIST */
+        .edu-school {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .edu-list {
+            margin-top: 15px;
+            padding-left: 20px;
+            line-height: 1.7;
+            font-size: 15px;
+        }
         .about {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -118,7 +195,7 @@
             margin-bottom: 8px;
         }
 
-
+        
         .awards-list {
             display: grid;
             gap: 24px;
@@ -245,6 +322,61 @@
         <div class="btn-group">
             <a href="#projects" class="btn">View My Work</a>
             <a href="#contact" class="btn" style="background: rgba(255,255,255,0.2); border: 1px solid #fff;">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION SECTION ===== -->
+    <section class="edu-section container">
+        <h3 class="edu-title">Education</h3>
+        <div class="edu-grid">
+            <!-- BACHELOR -->
+            <div class="edu-card">
+                <div class="edu-icon">
+                    <!-- Graduation Cap -->
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2269AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 7L12 12 2 7l10-5 10 5z"/>
+                        <path d="M6 10v6c3 2 9 2 12 0v-6"/>
+                    </svg>
+                </div>
+
+                <h4 class="edu-degree">
+                    Bachelor of International Economics
+                    <span class="edu-badge">
+                        <!-- Badge Icon -->
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24">
+                            <path d="M12 2l3 6 6 .5-4 4 1 6-6-3-6 3 1-6-4-4L9 8z"/>
+                        </svg>
+                        Salutatorian
+                    </span>
+                </h4>
+
+                <p class="edu-school">Foreign Trade University (2017 – 2021)</p>
+
+                <ul class="edu-list">
+                    <li>GPA: 3.93 / 4.0</li>
+                    <li>Scholarship recipient for 8 consecutive semesters</li>
+                    <li>Outstanding performance in quantitative & econometric subjects</li>
+                </ul>
+            </div>
+
+            <!-- MASTER -->
+            <div class="edu-card">
+                <div class="edu-icon">
+                    <!-- Book Icon -->
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1D97C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M4 4.5A2.5 2.5 0 0 1 6.5 7H20v14H6.5A2.5 2.5 0 0 0 4 23V4.5z"/>
+                    </svg>
+                </div>
+
+                <h4 class="edu-degree">Master of Finance & Banking</h4>
+                <p class="edu-school">Foreign Trade University (2025 – 2026)</p>
+
+                <ul class="edu-list">
+                    <li>Specialization in quantitative finance & financial data analytics</li>
+                    <li>Research direction: data-driven financial decision-making</li>
+                </ul>
+            </div>
         </div>
     </section>
 
