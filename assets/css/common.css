@@ -1,0 +1,31 @@
+/* assets/css/common.css */
+
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+/* Basic */
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* CTA button (datamart + dashboards đang dùng giống nhau) */
+.cta { text-align: center; margin-top: 60px; }
+.cta a {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--main-color);
+  color: var(--white);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.cta a:hover { background: #0f172a; }
