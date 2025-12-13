@@ -4,324 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linh — Portfolio</title>
-    <style>
-        :root {
-            --main-color: #4f46e5;
-            --text-color: #333;
-            --bg-light: #f9f9f9;
-            --white: #fff;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: "Segoe UI", sans-serif;
-            color: var(--text-color);
-            background: var(--bg-light);
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-
-        /* HERO */
-        .hero {
-            height: 100vh;
-            background: url('https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 0 80px;
-            color: #fff;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
-        }
-
-            .hero h1 {
-                font-size: 56px;
-                font-weight: bold;
-            }
-
-            .hero h2 {
-                font-size: 24px;
-                max-width: 600px;
-                margin-top: 15px;
-            }
-
-            .hero .btn-group {
-                margin-top: 40px;
-                display: flex;
-                gap: 20px;
-            }
-
-        .btn {
-            padding: 14px 32px;
-            border-radius: 8px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: white;
-            font-weight: 500;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-            .btn:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            }
-
-        section h3 {
-            font-size: 32px;
-            margin-bottom: 30px;
-        }
-        /* ===== EDUCATION SECTION ===== */
-        .edu-section {
-            padding: 80px 20px;
-            margin-top: 80px;
-        }
-
-        .edu-title {
-            font-size: 36px;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* GRID */
-        .edu-grid {
-            display: grid;
-            gap: 40px;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        }
-
-        /* CARD */
-        .edu-card {
-            background: rgba(255, 255, 255, 0.28);
-            backdrop-filter: blur(8px);
-            padding: 32px 36px;
-            border-radius: 14px;
-            border-left: 6px solid var(--main-color);
-            position: relative;
-            transition: 0.3s ease;
-        }
-
-        .edu-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-        }
-
-        /* ICON */
-        .edu-icon {
-            margin-bottom: 15px;
-        }
-
-        /* TITLE + BADGE */
-        .edu-degree {
-            margin: 0;
-            font-size: 22px;
-            font-weight: 700;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .edu-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: #fff3bf;
-            padding: 4px 10px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            width: fit-content;
-            color: #b45309;
-            border: 1px solid #facc15;
-        }
-
-        /* SCHOOL + LIST */
-        .edu-school {
-            margin-top: 10px;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .edu-list {
-            margin-top: 15px;
-            padding-left: 20px;
-            line-height: 1.7;
-            font-size: 15px;
-        }
-        .about {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            align-items: center;
-            gap: 50px;
-        }
-
-        .about-img {
-            height: 1000px;
-            border-radius: 14px;
-            background: url('images/my-profile-pic.jpg') center/cover no-repeat;
-        }
-
-
-        .about blockquote {
-            font-style: italic;
-            background: var(--quote-bg);
-            border-left: 6px solid var(--main-color);
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 8px;
-            color: #444;
-            font-size: 18px;
-        }
-        .about ul {
-            padding-left: 20px;
-            margin-top: 10px;
-        }
-
-        .about ul li {
-            margin-bottom: 8px;
-        }
-
-        
-        .awards-list {
-            display: grid;
-            gap: 24px;
-            background: var(--award-bg);
-            border-left: 4px solid var(--main-color);
-            padding: 40px 30px;
-            border-radius: 12px;
-        }
-
-        .award-item {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .award-item .year {
-            font-weight: bold;
-            color: var(--main-color);
-        }
-
-        .award-item .title {
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        .award-item .desc {
-            font-size: 15px;
-            color: #555;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-            transition: 0.3s ease;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-img {
-            height: 160px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .card-content {
-            padding: 20px;
-        }
-
-        .card h4 {
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-
-        .contact {
-            background: url('images/background-contact.jpg') center/cover no-repeat;
-            color: white;
-            padding: 80px 20px;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
-        }
-
-            .contact a {
-                text-decoration: underline;
-                color: white;
-            }
-
-        .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-        }
-
-        .contact-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(6px);
-        border-radius: 14px;
-        padding: 20px;
-        text-align: center;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        transition: transform 0.3s ease;
-        }
-
-        .contact-card:hover {
-        transform: translateY(-5px);
-        }
-
-        .contact-card .icon {
-        width: 48px;
-        height: 48px;
-        margin-bottom: 12px;
-        }
-
-        .contact-card a {
-        color: #ffffff;
-        text-decoration: underline;
-        word-break: break-all;
-        }
-    
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            .hero h2 {
-                font-size: 18px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/index.css" />
 </head>
+
 <body>
     <section class="hero">
         <h1>Hello, I'm Linh 👋</h1>
         <h2>Data Analytics Manager — Datamart design, dashboards, business insights & AI-powered analytics</h2>
-        <div class="btn-group">
+        
+    <div class="btn-group">
             <a href="#projects" class="btn">View My Work</a>
-            <a href="#contact" class="btn" style="background: rgba(255,255,255,0.2); border: 1px solid #fff;">Contact Me</a>
+            <a href="#contact" class="btn btn--ghost">Contact Me</a>
         </div>
     </section>
 
@@ -384,7 +77,7 @@
     <h3>About Me</h3>
     <div class="about">
         <div>
-        <p style="font-size: 14px; font-style: italic; color: #555;">
+        <p class="about-intro">
             I'm a Data Analytics Manager focusing on datamart design, end-to-end analytics, dashboard systems, and AI applications to optimize business decision-making. I lead a talented team of analysts and build scalable data solutions.
         </p>
 
@@ -425,14 +118,14 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-img" style="background-image:url('images/poster.png');"></div>
+                <div class="card-img" style="background-image:url('assets/images/poster.png');"></div>
                 <div class="card-content">
                     <h4>Infographics</h4>
                     <p>Infographics and reports designed for storytelling and presentations.</p>
                 </div>
             </div>
             <div class="card">
-                <div class="card-img" style="background-image:url('images/logos.png');"></div>
+                <div class="card-img" style="background-image:url('assets/images/logos.png');"></div>
                 <div class="card-content">
                     <h4>Logos & Branding</h4>
                     <p>Brand identity systems, banners, and visuals crafted with Figma.</p>
@@ -481,21 +174,21 @@
         <h3>Featured Projects</h3>
         <div class="projects-grid">
             <div class="card">
-                <div class="card-img" style="background-image:url('images/datamart-design.jpg');"></div>
+                <div class="card-img" style="background-image:url('assets/images/datamart-design.jpg');"></div>
                 <div class="card-content">
                     <h4><a href="datamart.html">Datamart Design</a></h4>
                     <p>Designed datamarts for enterprise-level dashboards and analytics workloads.</p>
                 </div>
             </div>
             <div class="card">
-                <div class="card-img" style="background-image:url('images/insight.png');"></div>
+                <div class="card-img" style="background-image:url('assets/images/insight.png');"></div>
                 <div class="card-content">
                     <h4>Insights & Reporting</h4>
                     <p>Automated reporting systems for operations, sales, logistics, and customer analytics.</p>
                 </div>
             </div>
             <div class="card">
-                <div class="card-img" style="background-image:url('images/ai-chatbot.jpg');"></div>
+                <div class="card-img" style="background-image:url('assets/images/ai-chatbot.jpg');"></div>
                 <div class="card-content">
                     <h4>AI Applications</h4>
                     <p>Developed customer support chatbots and analytics chatbots using N8N & Dify.</p>
@@ -510,19 +203,19 @@
         <h3>Contact</h3>
         <div class="contact-grid">
         <div class="contact-card">
-            <img src="images/gmail-icon.jpg" alt="Email Icon" class="icon">
+            <img src="assets/images/gmail-icon.jpg" alt="Email Icon" class="icon">
             <p><strong>Email:</strong><br><a href="mailto:linhpi9999@gmail.com">linhpi9999@gmail.com</a></p>
         </div>
         <div class="contact-card">
-            <img src="images/facebook_icon.png" alt="Facebook Icon" class="icon">
+            <img src="assets/images/facebook_icon.png" alt="Facebook Icon" class="icon">
             <p><strong>Facebook:</strong><br><a href="https://facebook.com/yourprofile" target="_blank">facebook.com/yourprofile</a></p>
         </div>
         <div class="contact-card">
-            <img src="images/LinkedIn_icon.png" alt="LinkedIn Icon" class="icon">
+            <img src="assets/images/LinkedIn_icon.png" alt="LinkedIn Icon" class="icon">
             <p><strong>LinkedIn:</strong><br><a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
         </div>
         <div class="contact-card">
-            <img src="images/tiktok-icon.png" alt="TikTok Icon" class="icon">
+            <img src="assets/images/tiktok-icon.png" alt="TikTok Icon" class="icon">
             <p><strong>TikTok:</strong><br><a href="https://tiktok.com/@yourprofile" target="_blank">tiktok.com/@yourprofile</a></p>
         </div>
         </div>
