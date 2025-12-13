@@ -1,0 +1,134 @@
+/* assets/css/dashboards.css */
+
+:root {
+  --main-color: #1e293b;
+  --accent-color: #3b82f6;
+  --bg-color: #f8fafc;
+  --white: #ffffff;
+  --text-color: #0f172a;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 42px;
+  color: var(--main-color);
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 24px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+.card-desc {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+  max-width: 90vw;
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.modal-content img {
+  width: 100%;
+  display: block;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+/* CTA BUTTON */
+.cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--main-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.cta a:hover {
+  background: #0f172a;
+}
+
+@media (max-width: 768px) {
+  .cta a {
+    width: 90%;
+    font-size: 15px;
+  }
+}

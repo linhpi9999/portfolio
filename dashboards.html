@@ -4,140 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard Gallery</title>
-  <style>
-    :root {
-      --main-color: #1e293b;
-      --accent-color: #3b82f6;
-      --bg-color: #f8fafc;
-      --white: #ffffff;
-      --text-color: #0f172a;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--bg-color);
-      margin: 0;
-      padding: 0;
-      color: var(--text-color);
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 42px;
-      color: var(--main-color);
-      font-weight: 700;
-      margin-bottom: 50px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
-
-    .card {
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card-body {
-      padding: 24px;
-    }
-
-    .card-title {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: var(--main-color);
-    }
-
-    .card-desc {
-      font-size: 15px;
-      color: #475569;
-      line-height: 1.6;
-    }
-
-    .card-link {
-      display: inline-block;
-      margin-top: 16px;
-      font-size: 14px;
-      color: var(--accent-color);
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .card-link:hover {
-      color: #2563eb;
-      text-decoration: underline;
-    }
-
-    dialog::backdrop {
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    dialog {
-      max-width: 90vw;
-      border: none;
-      border-radius: 10px;
-      padding: 0;
-      overflow: hidden;
-    }
-
-    .modal-content img {
-      width: 100%;
-      display: block;
-      max-height: 90vh;
-      object-fit: contain;
-    }
-
-    /* CTA BUTTON */
-    .cta {
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    .cta a {
-      display: inline-block;
-      padding: 12px 28px;
-      background: var(--main-color);
-      color: var(--white);
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-
-    .cta a:hover {
-      background: #0f172a;
-    }
-
-    @media (max-width: 768px) {
-      .cta a {
-        width: 90%;
-        font-size: 15px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/dashboards.css">
 </head>
 
 <body>
@@ -148,7 +15,7 @@
 
       <!-- Dashboard 1 -->
       <div class="card">
-        <img src="images/project-management-dashboard-pic.png" alt="Project Management Dashboard">
+        <img src="assets/images/project-management-dashboard-pic.png" alt="Project Management Dashboard">
         <div class="card-body">
           <div class="card-title">Project Management Dashboard</div>
           <div class="card-desc">Track project progress, task completion, and team workloads in real time.</div>
@@ -159,7 +26,7 @@
 
       <!-- Dashboard 2 -->
       <div class="card">
-        <img src="images/business-overview.png" alt="Business Performance Overview">
+        <img src="assets/images/business-overview.png" alt="Business Performance Overview">
         <div class="card-body">
           <div class="card-title">Business Performance Overview</div>
           <div class="card-desc">Summarizes KPIs, revenue trends, and department-level metrics.</div>
@@ -169,7 +36,7 @@
 
       <!-- Dashboard 3 -->
       <div class="card">
-        <img src="images/product-intelligence.png" alt="Product Intelligence Dashboard">
+        <img src="assets/images/product-intelligence.png" alt="Product Intelligence Dashboard">
         <div class="card-body">
           <div class="card-title">Product Intelligence Dashboard</div>
           <div class="card-desc">Understand feature adoption, retention cohorts, and usage by segment.</div>
@@ -179,7 +46,7 @@
 
       <!-- Dashboard 4 -->
       <div class="card">
-        <img src="images/marketing-campaign.png" alt="Marketing Campaign Dashboard">
+        <img src="assets/images/marketing-campaign.png" alt="Marketing Campaign Dashboard">
         <div class="card-body">
           <div class="card-title">Marketing Campaign Dashboard</div>
           <div class="card-desc">Monitor campaign ROI, conversion rates, and multi-channel performance.</div>
@@ -189,7 +56,7 @@
 
       <!-- Dashboard 5 -->
       <div class="card">
-        <img src="images/financial-summary.png" alt="Financial Summary Dashboard">
+        <img src="assets/images/financial-summary.png" alt="Financial Summary Dashboard">
         <div class="card-body">
           <div class="card-title">Financial Summary Dashboard</div>
           <div class="card-desc">Overview of expenses, revenue, profit margins, and budget tracking.</div>
@@ -199,7 +66,7 @@
 
       <!-- Dashboard 6 -->
       <div class="card">
-        <img src="images/operations-monitor.png" alt="Operations Monitoring Dashboard">
+        <img src="assets/images/operations-monitor.png" alt="Operations Monitoring Dashboard">
         <div class="card-body">
           <div class="card-title">Operations Monitoring Dashboard</div>
           <div class="card-desc">Track operational efficiency, inventory movement, and SLA compliance.</div>
@@ -211,7 +78,7 @@
 
     <!-- CTA BUTTON -->
     <div class="cta">
-      <a href="/index.html">← Back to Portfolio</a>
+      <a href="./index.html">← Back to Portfolio</a>
     </div>
   </div>
 
