@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Branding & Marketing</title>
+
+  <link rel="stylesheet" href="assets/css/branding-marketing.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="back" href="./index.html">← Back to Portfolio</a>
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Branding & Marketing</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Branding & Marketing</h1>
+        <p>
+          Mình thiết kế <strong>logo/brand identity</strong> cho doanh nghiệp và triển khai các <strong>marketing assets</strong>
+          như: content TikTok, xây fanpage Facebook, social templates, và <strong>catalog</strong>.
+          Click vào từng item để xem bản full.
+        </p>
+
+        <div class="meta">
+          <span class="pill">Logo System</span>
+          <span class="pill">Social Content</span>
+          <span class="pill">Catalog Design</span>
+          <span class="pill">Campaign-ready</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <div class="searchbox">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input id="q" type="search" placeholder="Tìm theo tên, tag… (vd: logo, tiktok, catalog)" autocomplete="off">
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Filters">
+          <button class="chip is-active" data-filter="all" type="button">All</button>
+          <button class="chip" data-filter="identity" type="button">Brand Identity</button>
+          <button class="chip" data-filter="logo" type="button">Logo</button>
+          <button class="chip" data-filter="marketing" type="button">Marketing</button>
+          <button class="chip" data-filter="social" type="button">Social</button>
+          <button class="chip" data-filter="catalog" type="button">Catalog</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" id="grid">
+
+      <!-- 1) Logo system (bạn đã có logos.png) -->
+      <article class="card" data-tags="identity logo branding guideline system">
+        <button class="card-media" type="button"
+                data-src="assets/images/logos.png"
+                data-title="Logo System Overview"
+                data-sub="Brand Identity / Logo">
+          <img loading="lazy" src="assets/images/logos.png" alt="Logo System Overview">
+        </button>
+
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="card-title">Logo System Overview</h3>
+            <span class="badge">Logo</span>
+          </div>
+          <p class="card-desc">Tổng quan hệ logo/variation: cấu trúc, tỷ lệ, cách dùng theo context.</p>
+          <div class="card-tags">
+            <span>#logo</span><span>#identity</span><span>#system</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2) Catalog (placeholder) -->
+      <article class="card" data-tags="catalog marketing product brochure layout">
+        <button class="card-media" type="button"
+                data-src="assets/images/catalog-01.png"
+                data-title="Product Catalog Design"
+                data-sub="Catalog">
+          <img loading="lazy" src="assets/images/catalog-01.png" alt="Product Catalog Design"
+               onerror="this.closest('.card').classList.add('is-missing'); this.style.display='none';">
+          <div class="missing">
+            <div class="missing-title">Chưa có ảnh</div>
+            <div class="missing-sub">assets/images/catalog-01.png</div>
+          </div>
+        </button>
+
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="card-title">Product Catalog Design</h3>
+            <span class="badge badge--alt">Catalog</span>
+          </div>
+          <p class="card-desc">Catalog theo grid system: dễ đọc, rõ hierarchy, phù hợp in ấn & digital PDF.</p>
+          <div class="card-tags">
+            <span>#catalog</span><span>#layout</span><span>#print</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3) TikTok content (placeholder) -->
+      <article class="card" data-tags="marketing social tiktok content plan script thumbnail">
+        <button class="card-media" type="button"
+                data-src="assets/images/tiktok-content-01.png"
+                data-title="TikTok Content Kit"
+                data-sub="Marketing / Social">
+          <img loading="lazy" src="assets/images/tiktok-content-01.png" alt="TikTok Content Kit"
+               onerror="this.closest('.card').classList.add('is-missing'); this.style.display='none';">
+          <div class="missing">
+            <div class="missing-title">Chưa có ảnh</div>
+            <div class="missing-sub">assets/images/tiktok-content-01.png</div>
+          </div>
+        </button>
+
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="card-title">TikTok Content Kit</h3>
+            <span class="badge">Marketing</span>
+          </div>
+          <p class="card-desc">Bộ template: hook, script, CTA + thumbnail concept để scale nội dung nhanh.</p>
+          <div class="card-tags">
+            <span>#tiktok</span><span>#content</span><span>#template</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4) Facebook fanpage setup (placeholder) -->
+      <article class="card" data-tags="marketing social facebook fanpage cover guideline">
+        <button class="card-media" type="button"
+                data-src="assets/images/fanpage-fb-01.png"
+                data-title="Facebook Fanpage Setup"
+                data-sub="Marketing / Social">
+          <img loading="lazy" src="assets/images/fanpage-fb-01.png" alt="Facebook Fanpage Setup"
+               onerror="this.closest('.card').classList.add('is-missing'); this.style.display='none';">
+          <div class="missing">
+            <div class="missing-title">Chưa có ảnh</div>
+            <div class="missing-sub">assets/images/fanpage-fb-01.png</div>
+          </div>
+        </button>
+
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="card-title">Facebook Fanpage Setup</h3>
+            <span class="badge">Social</span>
+          </div>
+          <p class="card-desc">Cover/avatar/post templates + tone of voice để fanpage nhìn “đúng brand”.</p>
+          <div class="card-tags">
+            <span>#facebook</span><span>#fanpage</span><span>#branding</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5) Brand guideline one-pager (placeholder) -->
+      <article class="card" data-tags="identity guideline typography color spacing">
+        <button class="card-media" type="button"
+                data-src="assets/images/brand-guideline-01.png"
+                data-title="Brand Guideline One-pager"
+                data-sub="Brand Identity">
+          <img loading="lazy" src="assets/images/brand-guideline-01.png" alt="Brand Guideline One-pager"
+               onerror="this.closest('.card').classList.add('is-missing'); this.style.display='none';">
+          <div class="missing">
+            <div class="missing-title">Chưa có ảnh</div>
+            <div class="missing-sub">assets/images/brand-guideline-01.png</div>
+          </div>
+        </button>
+
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="card-title">Brand Guideline One-pager</h3>
+            <span class="badge badge--alt">Identity</span>
+          </div>
+          <p class="card-desc">Màu sắc, type scale, spacing rules, do/don’t — tối ưu handoff cho team.</p>
+          <div class="card-tags">
+            <span>#guideline</span><span>#typography</span><span>#color</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6) Campaign creative (có thể dùng poster.png của bạn như ví dụ) -->
+      <article class="card" data-tags="marketing campaign creative poster content">
+        <button class="card-media" type="button"
+                data-src="assets/images/poster.png"
+                data-title="Campaign Creative (Poster/Key Visual)"
+                data-sub="Marketing">
+          <img loading="lazy" src="assets/images/poster.png" alt="Campaign Creative Poster">
+        </button>
+
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="card-title">Campaign Creative (Poster/Key Visual)</h3>
+            <span class="badge">Marketing</span>
+          </div>
+          <p class="card-desc">Key visual theo hướng “story-first” để dùng đa kênh: post, banner, landing.</p>
+          <div class="card-tags">
+            <span>#campaign</span><span>#creative</span><span>#kv</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="hint">
+          Tip: Bạn chỉ cần copy ảnh vào <code>assets/images/</code> rồi thay đúng <code>src</code> + <code>data-src</code>.
+        </div>
+        <a class="back back--footer" href="./index.html">← Back to Portfolio</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal preview -->
+  <dialog id="modal" class="modal">
+    <button class="modal-close" type="button" aria-label="Close">✕</button>
+    <div class="modal-head">
+      <div class="modal-title" id="mTitle">Title</div>
+      <div class="modal-sub" id="mSub">Category</div>
+    </div>
+    <div class="modal-body">
+      <img id="mImg" src="" alt="Preview">
+    </div>
+  </dialog>
+
+  <script>
+    const modal = document.getElementById('modal');
+    const mImg = document.getElementById('mImg');
+    const mTitle = document.getElementById('mTitle');
+    const mSub = document.getElementById('mSub');
+
+    const closeModal = () => { try { modal.close(); } catch(e) {} };
+
+    document.querySelectorAll('.card-media').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const src = btn.dataset.src;
+        const title = btn.dataset.title || 'Branding & Marketing';
+        const sub = btn.dataset.sub || '';
+        mImg.src = src;
+        mTitle.textContent = title;
+        mSub.textContent = sub;
+        modal.showModal();
+      });
+    });
+
+    document.querySelector('.modal-close').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+    // filters + search
+    const chips = document.querySelectorAll('.chip');
+    const cards = document.querySelectorAll('.card');
+    const input = document.getElementById('q');
+
+    const apply = () => {
+      const active = document.querySelector('.chip.is-active')?.dataset.filter || 'all';
+      const q = (input.value || '').trim().toLowerCase();
+
+      cards.forEach(card => {
+        const tags = (card.dataset.tags || '').toLowerCase();
+        const title = (card.querySelector('.card-title')?.textContent || '').toLowerCase();
+        const desc = (card.querySelector('.card-desc')?.textContent || '').toLowerCase();
+
+        const matchFilter = active === 'all' || tags.includes(active);
+        const matchQuery = !q || tags.includes(q) || title.includes(q) || desc.includes(q);
+
+        card.style.display = (matchFilter && matchQuery) ? '' : 'none';
+      });
+    };
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('is-active'));
+        chip.classList.add('is-active');
+        apply();
+      });
+    });
+    input.addEventListener('input', apply);
+  </script>
+</body>
+</html>
