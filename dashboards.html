@@ -1,105 +1,264 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard Gallery</title>
+  <title>Dashboards Gallery</title>
+
   <link rel="stylesheet" href="assets/css/dashboards.css">
 </head>
 
 <body>
-  <div class="container">
-    <h1>📊 My Dashboard Projects</h1>
-
-    <div class="grid">
-
-      <!-- Dashboard 1 -->
-      <div class="card">
-        <img src="assets/images/project-management-dashboard-pic.png" alt="Project Management Dashboard">
-        <div class="card-body">
-          <div class="card-title">Project Management Dashboard</div>
-          <div class="card-desc">Track project progress, task completion, and team workloads in real time.</div>
-          <a href="https://docs.google.com/spreadsheets/d/1FTJtTsELXQKorrqumjCvG6V9DGvWEQ3_oHq7Gd4IhB4/edit?gid=13369317#gid=13369317" 
-             class="card-link" target="_blank">View Full Dashboard →</a>
-        </div>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="back" href="./index.html">← Back to Portfolio</a>
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Dashboards</span>
       </div>
-
-      <!-- Dashboard 2 -->
-      <div class="card">
-        <img src="assets/images/business-overview.png" alt="Business Performance Overview">
-        <div class="card-body">
-          <div class="card-title">Business Performance Overview</div>
-          <div class="card-desc">Summarizes KPIs, revenue trends, and department-level metrics.</div>
-          <a href="#" class="card-link" onclick="showImage('images/business-overview.png')">View Full Dashboard →</a>
-        </div>
-      </div>
-
-      <!-- Dashboard 3 -->
-      <div class="card">
-        <img src="assets/images/product-intelligence.png" alt="Product Intelligence Dashboard">
-        <div class="card-body">
-          <div class="card-title">Product Intelligence Dashboard</div>
-          <div class="card-desc">Understand feature adoption, retention cohorts, and usage by segment.</div>
-          <a href="#" class="card-link" onclick="showImage('images/product-intelligence.png')">View Full Dashboard →</a>
-        </div>
-      </div>
-
-      <!-- Dashboard 4 -->
-      <div class="card">
-        <img src="assets/images/marketing-campaign.png" alt="Marketing Campaign Dashboard">
-        <div class="card-body">
-          <div class="card-title">Marketing Campaign Dashboard</div>
-          <div class="card-desc">Monitor campaign ROI, conversion rates, and multi-channel performance.</div>
-          <a href="#" class="card-link" onclick="showImage('images/marketing-campaign.png')">View Full Dashboard →</a>
-        </div>
-      </div>
-
-      <!-- Dashboard 5 -->
-      <div class="card">
-        <img src="assets/images/financial-summary.png" alt="Financial Summary Dashboard">
-        <div class="card-body">
-          <div class="card-title">Financial Summary Dashboard</div>
-          <div class="card-desc">Overview of expenses, revenue, profit margins, and budget tracking.</div>
-          <a href="#" class="card-link" onclick="showImage('images/financial-summary.png')">View Full Dashboard →</a>
-        </div>
-      </div>
-
-      <!-- Dashboard 6 -->
-      <div class="card">
-        <img src="assets/images/operations-monitor.png" alt="Operations Monitoring Dashboard">
-        <div class="card-body">
-          <div class="card-title">Operations Monitoring Dashboard</div>
-          <div class="card-desc">Track operational efficiency, inventory movement, and SLA compliance.</div>
-          <a href="#" class="card-link" onclick="showImage('images/operations-monitor.png')">View Full Dashboard →</a>
-        </div>
-      </div>
-
     </div>
+  </header>
 
-    <!-- CTA BUTTON -->
-    <div class="cta">
-      <a href="./index.html">← Back to Portfolio</a>
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Dashboard Gallery</h1>
+        <p>
+          Bộ sưu tập dashboards theo hướng <strong>business-first</strong>: KPI rõ ràng, layout gọn, ra quyết định nhanh.
+          Bạn có thể <strong>filter</strong> theo domain và click để xem ảnh full (modal) hoặc mở link live.
+        </p>
+        <div class="meta">
+          <span class="pill">KPI Design</span>
+          <span class="pill">Storytelling</span>
+          <span class="pill">Executive-ready</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <div class="searchbox">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input id="q" type="search" placeholder="Tìm theo tên dashboard, tag… (vd: finance, ops)" autocomplete="off">
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Filters">
+          <button class="chip is-active" data-filter="all" type="button">All</button>
+          <button class="chip" data-filter="project" type="button">Project</button>
+          <button class="chip" data-filter="business" type="button">Business</button>
+          <button class="chip" data-filter="product" type="button">Product</button>
+          <button class="chip" data-filter="marketing" type="button">Marketing</button>
+          <button class="chip" data-filter="finance" type="button">Finance</button>
+          <button class="chip" data-filter="ops" type="button">Ops</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" id="grid">
+      <!-- 1) Project Management (external link) -->
+      <article class="card" data-tags="project execution workload planning google-sheets link">
+        <button class="card-media is-link" type="button"
+                data-href="https://docs.google.com/spreadsheets/d/1FTJtTsELXQKorrqumjCvG6V9DGvWEQ3_oHq7Gd4IhB4/edit?gid=13369317#gid=13369317"
+                data-title="Project Management Dashboard"
+                data-sub="Project / Live link">
+          <img src="assets/images/project-management-dashboard-pic.png" alt="Project Management Dashboard">
+        </button>
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="card-title">Project Management Dashboard</h3>
+            <span class="badge badge--warn">Live</span>
+          </div>
+          <p class="card-desc">Track tiến độ, task completion và workload theo team/owner để điều phối nguồn lực.</p>
+          <div class="card-tags">
+            <span>#project</span><span>#workload</span><span>#planning</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2) Business Overview -->
+      <article class="card" data-tags="product overview kpi performance executive summary">
+        <button class="card-media" type="button"
+                data-src="images/dashboard-product-management.png"
+                data-title="Product Management Dashboard"
+                data-sub="Business">
+          <img src="assets/images/dashboard-product-management.png" alt="Product Management Dashboard">
+        </button>
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="card-title">Order Management Dashboard</h3>
+            <span class="badge">Business</span>
+          </div>
+          <p class="card-desc">Theo dõi việc nhập xuất của các đơn hàng.</p>
+          <div class="card-tags">
+            <span>#business</span><span>#kpi</span><span>#executive</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3) Product Intelligence -->
+      <article class="card" data-tags="product adoption retention cohort usage segment">
+        <button class="card-media" type="button"
+                data-src="images/product-intelligence.png"
+                data-title="Product Intelligence Dashboard"
+                data-sub="Product">
+          <img src="images/product-intelligence.png" alt="Product Intelligence Dashboard">
+        </button>
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="card-title">Product Intelligence Dashboard</h3>
+            <span class="badge">Product</span>
+          </div>
+          <p class="card-desc">Theo dõi adoption, retention cohorts và usage theo segment để định hướng roadmap.</p>
+          <div class="card-tags">
+            <span>#product</span><span>#retention</span><span>#cohort</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4) Marketing Campaign -->
+      <article class="card" data-tags="marketing campaign roi conversion channel performance">
+        <button class="card-media" type="button"
+                data-src="images/marketing-campaign.png"
+                data-title="Marketing Campaign Dashboard"
+                data-sub="Marketing">
+          <img src="images/marketing-campaign.png" alt="Marketing Campaign Dashboard">
+        </button>
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="card-title">Marketing Campaign Dashboard</h3>
+            <span class="badge">Marketing</span>
+          </div>
+          <p class="card-desc">Giám sát ROI, conversion rate và hiệu quả theo kênh để tối ưu phân bổ ngân sách.</p>
+          <div class="card-tags">
+            <span>#marketing</span><span>#roi</span><span>#growth</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5) Financial Summary -->
+      <article class="card" data-tags="finance revenue expense profit margin budget forecast">
+        <button class="card-media" type="button"
+                data-src="images/financial-summary.png"
+                data-title="Financial Summary Dashboard"
+                data-sub="Finance">
+          <img src="images/financial-summary.png" alt="Financial Summary Dashboard">
+        </button>
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="card-title">Financial Summary Dashboard</h3>
+            <span class="badge">Finance</span>
+          </div>
+          <p class="card-desc">Tổng quan expense/revenue, profit margins và budget tracking để kiểm soát hiệu quả.</p>
+          <div class="card-tags">
+            <span>#finance</span><span>#budget</span><span>#margin</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6) Operations Monitor -->
+      <article class="card" data-tags="ops operation sla inventory efficiency monitoring">
+        <button class="card-media" type="button"
+                data-src="images/operations-monitor.png"
+                data-title="Operations Monitoring Dashboard"
+                data-sub="Ops">
+          <img src="images/operations-monitor.png" alt="Operations Monitoring Dashboard">
+        </button>
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="card-title">Operations Monitoring Dashboard</h3>
+            <span class="badge badge--alt">Ops</span>
+          </div>
+          <p class="card-desc">Theo dõi efficiency, inventory movement và SLA compliance để phát hiện issue sớm.</p>
+          <div class="card-tags">
+            <span>#ops</span><span>#sla</span><span>#monitor</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="hint">
+          Tip: Ảnh đang nằm ở <code>images/</code> (cùng cấp với <code>dashboards.html</code>). Nếu bạn chuyển ảnh qua <code>assets/images/</code> thì chỉ cần đổi <code>src</code>/<code>data-src</code>.
+        </div>
+        <a class="back back--footer" href="./index.html">← Back to Portfolio</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal preview -->
+  <dialog id="modal" class="modal">
+    <button class="modal-close" type="button" aria-label="Close">✕</button>
+    <div class="modal-head">
+      <div class="modal-title" id="mTitle">Title</div>
+      <div class="modal-sub" id="mSub">Category</div>
     </div>
-  </div>
-
-  <!-- MODAL PREVIEW -->
-  <dialog id="modal">
-    <div class="modal-content">
-      <img id="modal-image" src="" alt="Dashboard Preview">
+    <div class="modal-body">
+      <img id="mImg" src="" alt="Dashboard preview">
     </div>
   </dialog>
 
   <script>
-    const modal = document.getElementById("modal");
-    const modalImg = document.getElementById("modal-image");
+    const modal = document.getElementById('modal');
+    const mImg = document.getElementById('mImg');
+    const mTitle = document.getElementById('mTitle');
+    const mSub = document.getElementById('mSub');
 
-    function showImage(src) {
-      modalImg.src = src;
-      modal.showModal();
-    }
+    const closeModal = () => { try { modal.close(); } catch(e) {} };
 
-    modal.addEventListener("click", () => modal.close());
+    // open: image preview or external link
+    document.querySelectorAll('.card-media').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const href = btn.dataset.href;
+        if (href) {
+          window.open(href, '_blank', 'noopener,noreferrer');
+          return;
+        }
+
+        const src = btn.dataset.src;
+        const title = btn.dataset.title || 'Dashboard';
+        const sub = btn.dataset.sub || '';
+        mImg.src = src;
+        mTitle.textContent = title;
+        mSub.textContent = sub;
+        modal.showModal();
+      });
+    });
+
+    document.querySelector('.modal-close').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+    // filters + search
+    const chips = document.querySelectorAll('.chip');
+    const cards = document.querySelectorAll('.card');
+    const input = document.getElementById('q');
+
+    const apply = () => {
+      const active = document.querySelector('.chip.is-active')?.dataset.filter || 'all';
+      const q = (input.value || '').trim().toLowerCase();
+
+      cards.forEach(card => {
+        const tags = (card.dataset.tags || '').toLowerCase();
+        const title = (card.querySelector('.card-title')?.textContent || '').toLowerCase();
+        const desc = (card.querySelector('.card-desc')?.textContent || '').toLowerCase();
+
+        const matchFilter = active === 'all' || tags.includes(active);
+        const matchQuery = !q || tags.includes(q) || title.includes(q) || desc.includes(q);
+
+        card.style.display = (matchFilter && matchQuery) ? '' : 'none';
+      });
+    };
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('is-active'));
+        chip.classList.add('is-active');
+        apply();
+      });
+    });
+    input.addEventListener('input', apply);
   </script>
-
 </body>
 </html>

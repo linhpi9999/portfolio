@@ -1,81 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Datamart Project – Lakehouse Architecture</title>
+  <title>Datamart Case Study — Lakehouse + Apache Iceberg</title>
+
   <link rel="stylesheet" href="assets/css/datamart.css">
 </head>
+
 <body>
-  <div class="container">
-    <h1>Datamart Project – Lakehouse Architecture with Apache Iceberg</h1>
-
-    <div class="section">
-      <h2>1. Project Overview</h2>
-      <p>The Datamart project was built to create a unified, scalable, and high-performance data platform. By adopting a Lakehouse architecture combined with Apache Iceberg, the system ensures:</p>
-      <ul>
-        <li>Fast, stable, and consistent data queries</li>
-        <li>Flexible support for both batch and streaming processing</li>
-        <li>Scalability for data products and AI/ML pipelines</li>
-      </ul>
-      <p>I contributed as an <strong>Analytics Engineer</strong>, responsible for logic design, data modeling, and building/maintaining Datamarts for analysis.</p>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="back" href="./index.html">← Back to Portfolio</a>
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Datamart</span>
+      </div>
     </div>
+  </header>
 
-    <div class="section section-grid">
+  <main class="wrap">
+    <section class="hero">
       <div>
-        <h2>2. Architecture Overview</h2>
-        <p>The system follows a multi-layered architecture including:</p>
-        <ul>
-          <li><strong>Lake Storage:</strong> S3, Azure, GCS</li>
-          <li><strong>File formats:</strong> Parquet, Avro, Lance</li>
-          <li><strong>Table format:</strong> Apache Iceberg</li>
-          <li><strong>Compute engines:</strong> Spark, Trino</li>
-          <li><strong>Catalogs:</strong> Hive, AWS Glue, Nessie</li>
-        </ul>
-      </div>
-      <div class="image-container">
-        <img src="assets/images/iceberg.png" alt="Lakehouse Architecture Layered Stack" />
-      </div>
-    </div>
+        <h1>Datamart Case Study — Lakehouse Architecture with Apache Iceberg</h1>
+        <p>
+          Mục tiêu của dự án là xây dựng một nền tảng dữ liệu thống nhất, có khả năng mở rộng và tối ưu cho analytics/BI.
+          Giải pháp sử dụng <strong>Lakehouse</strong> + <strong>Apache Iceberg</strong> nhằm đảm bảo truy vấn ổn định,
+          quản trị dữ liệu tốt và hỗ trợ cả batch lẫn streaming.
+        </p>
 
-    <div class="section section-grid">
-      <div>
-        <h2>3. Dataflow – From Source to Gold Layer</h2>
-        <p>Data is ingested and transformed through multiple layers:</p>
-        <ul>
-          <li><strong>Landing Zone:</strong> Raw data in original structure</li>
-          <li><strong>Bronze Layer:</strong> Basic schema standardization</li>
-          <li><strong>Silver Layer:</strong> Data cleaning and consolidation</li>
-          <li><strong>Gold Layer:</strong> Final Datamarts optimized for analytics</li>
-        </ul>
+        <div class="pills">
+          <span class="pill">Lakehouse</span>
+          <span class="pill">Apache Iceberg</span>
+          <span class="pill">Spark / Trino</span>
+          <span class="pill">Data Modeling</span>
+          <span class="pill">Data Quality</span>
+        </div>
       </div>
-      <div class="image-container">
-        <img src="assets/images/Architecture.png" alt="Dataflow Architecture" />
+
+      <aside class="kpis">
+        <h3>At a glance</h3>
+        <div class="kpi-grid">
+          <div class="kpi">
+            <div class="label">Role</div>
+            <div class="value">Analytics Engineer</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Scope</div>
+            <div class="value">Gold Datamarts</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Key focus</div>
+            <div class="value">Modeling + Performance</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Consumers</div>
+            <div class="value">BI / Realtime / ML</div>
+          </div>
+        </div>
+
+        <div class="badges">
+          <span class="badge ok">Consistency</span>
+          <span class="badge">Scalability</span>
+          <span class="badge warn">Low Latency</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2>1) Project overview</h2>
+      <p>
+        Dự án Datamart giúp chuẩn hoá luồng dữ liệu từ source → landing → bronze/silver → gold (datamarts),
+        phục vụ dashboard/analytics với tiêu chí: <strong>đúng</strong>, <strong>nhanh</strong>, <strong>ổn định</strong>.
+      </p>
+      <div class="two-col" style="margin-top:14px">
+        <div class="card">
+          <h3>Problems we solved</h3>
+          <ul>
+            <li>Logic marts rời rạc, khó kiểm soát chất lượng</li>
+            <li>Query chậm do partition/format chưa tối ưu</li>
+            <li>Thiếu chuẩn hoá schema & layer hoá dữ liệu</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What we built</h3>
+          <ul>
+            <li>Gold datamarts theo business domain</li>
+            <li>Chuẩn hoá mô hình (facts/dims), KPI definitions</li>
+            <li>Monitoring/validation cho chất lượng dữ liệu</li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2>4. My Role in the Project</h2>
-      <ul>
-        <li><strong>Operate & optimize legacy marts:</strong> reviewing logic, optimizing partitions & performance</li>
-        <li><strong>Design & build new marts:</strong> translating business needs into logical models</li>
-        <li><strong>Ensure data quality:</strong> documentation, transformation testing, data monitoring</li>
-        <li><strong>Collaborate with Data Engineering:</strong> schema standardization, pipeline reviews</li>
-      </ul>
-    </div>
+    <section class="section">
+      <h2>2) Architecture overview</h2>
+      <p>
+        Kiến trúc gồm Lake storage + file format + table format (Iceberg) + compute engines (Spark/Trino) + catalog.
+        Thiết kế này giúp quản trị phiên bản bảng, schema evolution và tối ưu truy vấn.
+      </p>
 
-    <div class="section">
-      <h2>5. Key Achievements</h2>
-      <ul>
-        <li>Significantly reduced data refresh latency</li>
-        <li>Ensured consistent and reliable Datamart quality</li>
-        <li>Enabled downstream systems including BI, realtime dashboards, ML pipelines</li>
-      </ul>
-    </div>
+      <figure class="figure" style="margin-top:14px">
+        <img src="assets/images/iceberg.png" alt="Lakehouse layered architecture with Apache Iceberg">
+        <figcaption>Lakehouse stack: storage → formats → Iceberg tables → compute engines → catalog → BI/ML consumption.</figcaption>
+      </figure>
+    </section>
 
-    <div class="cta">
-      <a href="./index.html">← Back to Portfolio</a>
-    </div>
-  </div>
+    <section class="section">
+      <h2>3) Dataflow: source → gold layer</h2>
+      <div class="two-col" style="margin-top:14px">
+        <div class="card">
+          <h3>Layering strategy</h3>
+          <ul>
+            <li><strong>Landing</strong>: raw ingestion, giữ nguyên cấu trúc</li>
+            <li><strong>Bronze</strong>: chuẩn hoá schema tối thiểu</li>
+            <li><strong>Silver</strong>: clean, dedupe, consolidate</li>
+            <li><strong>Gold</strong>: datamarts theo use-case/KPI</li>
+          </ul>
+        </div>
+        <figure class="figure">
+          <img src="assets/images/Architecture.png" alt="Dataflow from source to gold layer">
+          <figcaption>Pipeline layering để đảm bảo traceability và chất lượng dữ liệu.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>4) My role & deliverables</h2>
+      <div class="two-col" style="margin-top:14px">
+        <div class="card">
+          <h3>Datamart design</h3>
+          <ul>
+            <li>Translate business needs → logical model (facts/dims)</li>
+            <li>Định nghĩa KPI, grain, business rules, mapping</li>
+            <li>Thiết kế partitioning/aggregation để tối ưu query</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Quality & performance</h3>
+          <ul>
+            <li>Review/optimize marts cũ: logic, partition, compute cost</li>
+            <li>Data checks: completeness, uniqueness, anomaly signals</li>
+            <li>Documentation: metric definitions & data contracts</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>5) Impact</h2>
+      <p>
+        Kết quả chính tập trung vào ổn định vận hành và nâng chất lượng phục vụ analytics.
+        (Bạn có thể thay bằng số liệu thật nếu muốn “wow” hơn.)
+      </p>
+      <div class="two-col" style="margin-top:14px">
+        <div class="card">
+          <h3>Business outcomes</h3>
+          <ul>
+            <li>Giảm độ trễ refresh & tăng độ tin cậy số liệu</li>
+            <li>KPI nhất quán giữa nhiều dashboard/report</li>
+            <li>Enable use-cases: BI, realtime, ML pipelines</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Tech stack</h3>
+          <ul>
+            <li>Storage: S3/Azure/GCS</li>
+            <li>Formats: Parquet/Avro</li>
+            <li>Table format: Apache Iceberg</li>
+            <li>Engines: Spark/Trino</li>
+            <li>Catalog: Hive/Glue/Nessie</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="hint">
+          Tip: Nếu ảnh không hiện, kiểm tra đúng đường dẫn <code>assets/images/iceberg.png</code> và <code>assets/images/Architecture.png</code>.
+        </div>
+        <div class="cta">
+          <a class="btn" href="./index.html">← Back</a>
+          <a class="btn primary" href="./dashboards.html">View Dashboards →</a>
+        </div>
+      </div>
+    </footer>
+  </main>
 </body>
 </html>
