@@ -1,49 +1,66 @@
 <!DOCTYPE html>
-
 <html lang="vi">
 
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Dashboards</title>
+
   <!-- Font hỗ trợ tiếng Việt tốt, hiện đại -->
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
   <link href="assets/css/dashboards.css" rel="stylesheet" />
 </head>
 
 <body>
-  <!-- Top navigation (Wix-like: thoáng, tối giản) -->
   <main>
 
-    <!-- Centered hero -->
+    <!-- Hero + controls -->
     <section class="masthead">
       <div class="wrap masthead-inner">
-        <div class="back-top"><a class="back-btn" href="./index.html">← Quay lại Portfolio</a></div>
-        <h1>Chọn dashboard bạn muốn xem</h1>
-        <p class="lead">Bộ sưu tập dashboards theo hướng <strong>business-first</strong> — KPI rõ, bố cục gọn, hỗ trợ ra
-          quyết định.</p>
-        <div class="search">
-          <span aria-hidden="true" class="search-icon">⌕</span>
-          <input autocomplete="off" id="q" placeholder="Tìm theo tên hoặc tag… (vd: finance, ops, KPI)" type="search" />
+        <div class="back-top">
+          <a class="back-btn" href="./index.html">← Quay lại Portfolio</a>
         </div>
 
+        <h1>Chọn dashboard bạn muốn xem</h1>
+        <p class="lead">
+          Bộ sưu tập dashboards theo hướng <strong>business-first</strong> — KPI rõ, bố cục gọn, hỗ trợ ra quyết định.
+        </p>
+
+        <div class="controls" role="region" aria-label="Tìm kiếm và sắp xếp">
+          <label class="search" for="q">
+            <span aria-hidden="true" class="search-icon">⌕</span>
+            <input autocomplete="off" id="q" placeholder="Tìm theo tên hoặc từ khoá…" type="search" />
+          </label>
+
+        </div>
+
+        <div class="hint">Gợi ý: finance, ops, KPI</div>
       </div>
     </section>
-    <!-- Section header + sort (Wix-like) -->
+
+    <!-- Section head -->
     <section class="section-head">
       <div class="wrap head-inner">
-        <h2>Bộ sưu tập dashboards</h2>
+        <div class="head-left">
+          <h2>Bộ sưu tập dashboards</h2>
+          <div class="count" id="count" aria-live="polite"></div>
+        </div>
+
         <div class="sort">
-          <span>Sort by:</span>
-          <select aria-label="Sort dashboards" id="sort">
-            <option selected="" value="recommended">Recommended</option>
+          <span class="sort-label">Sắp xếp</span>
+          <select aria-label="Sắp xếp dashboards" id="sort">
+            <option selected value="recommended">Recommended</option>
             <option value="az">A → Z</option>
             <option value="za">Z → A</option>
           </select>
         </div>
       </div>
     </section>
+
     <!-- Grid -->
     <section class="wrap grid" id="grid">
       <article class="card" data-tags="project execution workload planning google-sheets link">
@@ -51,96 +68,132 @@
           data-href="https://docs.google.com/spreadsheets/d/1FTJtTsELXQKorrqumjCvG6V9DGvWEQ3_oHq7Gd4IhB4/edit?gid=13369317#gid=13369317"
           data-src="assets/images/project-management-dashboard-pic.png" data-sub="Project / Live link"
           data-title="Project Management Dashboard" type="button">
-          <img alt="Project Management Dashboard" src="assets/images/project-management-dashboard-pic.png" />
+          <span class="media-fallback" aria-hidden="true">
+            <span class="media-icon">▦</span>
+            <span class="media-text">Preview đang cập nhật</span>
+          </span>
+          <img loading="lazy" alt="Project Management Dashboard"
+            src="assets/images/project-management-dashboard-pic.png" />
         </button>
+
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">Project Management Dashboard</h3>
-
+            <span class="badge">Live</span>
           </div>
           <p class="card-desc">Track tiến độ, task completion và workload theo team/owner để điều phối nguồn lực.</p>
-          <div class="card-tags">
-            <span>#project</span><span>#workload</span><span>#planning</span>
+          <div class="card-tags" aria-label="Tags">
+            <span class="chip">Project</span><span class="chip">Workload</span><span class="chip">Planning</span>
           </div>
         </div>
       </article>
-      <article class="card" data-tags="product overview kpi performance executive summary business">
+
+      <article class="card" data-tags="order kpi performance executive summary business">
         <button class="card-media" data-src="assets/images/dashboard-product-management.png" data-sub="Business"
-          data-title="Product Management Dashboard" type="button">
-          <img alt="Product Management Dashboard" src="assets/images/dashboard-product-management.png" />
+          data-title="Order Management Dashboard" type="button">
+          <span class="media-fallback" aria-hidden="true">
+            <span class="media-icon">▦</span>
+            <span class="media-text">Preview đang cập nhật</span>
+          </span>
+          <img loading="lazy" alt="Order Management Dashboard" src="assets/images/dashboard-product-management.png" />
         </button>
+
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">Order Management Dashboard</h3>
-
+            <span class="badge">KPI</span>
           </div>
           <p class="card-desc">Theo dõi việc nhập xuất của các đơn hàng.</p>
-          <div class="card-tags">
-            <span>#business</span><span>#kpi</span><span>#executive</span>
+          <div class="card-tags" aria-label="Tags">
+            <span class="chip">Business</span><span class="chip">KPI</span><span class="chip">Executive</span>
           </div>
         </div>
       </article>
+
       <article class="card" data-tags="product adoption retention cohort usage segment">
-        <button class="card-media" data-src="images/product-intelligence.png" data-sub="Product"
+        <button class="card-media" data-src="assets/images/product-intelligence.png" data-sub="Product"
           data-title="Product Intelligence Dashboard" type="button">
-          <img alt="Product Intelligence Dashboard" src="images/product-intelligence.png" />
+          <span class="media-fallback" aria-hidden="true">
+            <span class="media-icon">▦</span>
+            <span class="media-text">Preview đang cập nhật</span>
+          </span>
+          <img loading="lazy" alt="Product Intelligence Dashboard" src="assets/images/product-intelligence.png" />
         </button>
+
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">Product Intelligence Dashboard</h3>
-
+            <span class="badge">Product</span>
           </div>
           <p class="card-desc">Theo dõi adoption, retention cohorts và usage theo segment để định hướng roadmap.</p>
-          <div class="card-tags">
-            <span>#product</span><span>#retention</span><span>#cohort</span>
+          <div class="card-tags" aria-label="Tags">
+            <span class="chip">Product</span><span class="chip">Retention</span><span class="chip">Cohort</span>
           </div>
         </div>
       </article>
+
       <article class="card" data-tags="marketing campaign roi conversion channel performance">
-        <button class="card-media" data-src="images/marketing-campaign.png" data-sub="Marketing"
+        <button class="card-media" data-src="assets/images/marketing-campaign.png" data-sub="Marketing"
           data-title="Marketing Campaign Dashboard" type="button">
-          <img alt="Marketing Campaign Dashboard" src="images/marketing-campaign.png" />
+          <span class="media-fallback" aria-hidden="true">
+            <span class="media-icon">▦</span>
+            <span class="media-text">Preview đang cập nhật</span>
+          </span>
+          <img loading="lazy" alt="Marketing Campaign Dashboard" src="assets/images/marketing-campaign.png" />
         </button>
+
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">Marketing Campaign Dashboard</h3>
-
+            <span class="badge">Growth</span>
           </div>
           <p class="card-desc">Giám sát ROI, conversion rate và hiệu quả theo kênh để tối ưu phân bổ ngân sách.</p>
-          <div class="card-tags">
-            <span>#marketing</span><span>#roi</span><span>#growth</span>
+          <div class="card-tags" aria-label="Tags">
+            <span class="chip">Marketing</span><span class="chip">ROI</span><span class="chip">Channel</span>
           </div>
         </div>
       </article>
+
       <article class="card" data-tags="finance revenue expense profit margin budget forecast">
-        <button class="card-media" data-src="images/financial-summary.png" data-sub="Finance"
+        <button class="card-media" data-src="assets/images/financial-summary.png" data-sub="Finance"
           data-title="Financial Summary Dashboard" type="button">
-          <img alt="Financial Summary Dashboard" src="images/financial-summary.png" />
+          <span class="media-fallback" aria-hidden="true">
+            <span class="media-icon">▦</span>
+            <span class="media-text">Preview đang cập nhật</span>
+          </span>
+          <img loading="lazy" alt="Financial Summary Dashboard" src="assets/images/financial-summary.png" />
         </button>
+
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">Financial Summary Dashboard</h3>
-
+            <span class="badge">Finance</span>
           </div>
           <p class="card-desc">Tổng quan expense/revenue, profit margins và budget tracking để kiểm soát hiệu quả.</p>
-          <div class="card-tags">
-            <span>#finance</span><span>#budget</span><span>#margin</span>
+          <div class="card-tags" aria-label="Tags">
+            <span class="chip">Finance</span><span class="chip">Budget</span><span class="chip">Margin</span>
           </div>
         </div>
       </article>
+
       <article class="card" data-tags="ops operation sla inventory efficiency monitoring">
-        <button class="card-media" data-src="images/operations-monitor.png" data-sub="Ops"
+        <button class="card-media" data-src="assets/images/operations-monitor.png" data-sub="Ops"
           data-title="Operations Monitoring Dashboard" type="button">
-          <img alt="Operations Monitoring Dashboard" src="images/operations-monitor.png" />
+          <span class="media-fallback" aria-hidden="true">
+            <span class="media-icon">▦</span>
+            <span class="media-text">Preview đang cập nhật</span>
+          </span>
+          <img loading="lazy" alt="Operations Monitoring Dashboard" src="assets/images/operations-monitor.png" />
         </button>
+
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">Operations Monitoring Dashboard</h3>
-
+            <span class="badge">Ops</span>
           </div>
           <p class="card-desc">Theo dõi efficiency, inventory movement và SLA compliance để phát hiện issue sớm.</p>
-          <div class="card-tags">
-            <span>#ops</span><span>#sla</span><span>#monitor</span>
+          <div class="card-tags" aria-label="Tags">
+            <span class="chip">Ops</span><span class="chip">SLA</span><span class="chip">Monitoring</span>
           </div>
         </div>
       </article>
@@ -152,7 +205,8 @@
       </div>
     </section>
   </main>
-  <!-- Modal (giữ logic cũ, cải thiện lấy src theo thumbnail) -->
+
+  <!-- Modal -->
   <dialog class="modal" id="modal">
     <button aria-label="Close" class="modal-close" type="button">✕</button>
     <div class="modal-head">
@@ -163,15 +217,34 @@
       <img alt="Dashboard preview" id="mImg" src="" />
     </div>
   </dialog>
+
   <script>
     const modal = document.getElementById('modal');
     const mImg = document.getElementById('mImg');
     const mTitle = document.getElementById('mTitle');
     const mSub = document.getElementById('mSub');
+    const countEl = document.getElementById('count');
 
     const closeModal = () => { try { modal.close(); } catch (e) { } };
 
-    // open: image preview or external link
+    // Mark missing thumbnails -> show placeholder
+    document.querySelectorAll('.card-media img').forEach(img => {
+      img.addEventListener('error', () => {
+        const btn = img.closest('.card-media');
+        if (btn) btn.classList.add('is-missing');
+      });
+    });
+
+    // Make whole card clickable (click on body triggers media)
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        const isInteractive = e.target.closest('button, a, select, input, dialog');
+        if (isInteractive) return;
+        card.querySelector('.card-media')?.click();
+      });
+    });
+
+    // Open: image preview or external link
     document.querySelectorAll('.card-media').forEach(btn => {
       btn.addEventListener('click', () => {
         const href = btn.dataset.href;
@@ -180,7 +253,6 @@
           return;
         }
 
-        // Prefer data-src, fallback to child <img src>
         const src = btn.dataset.src || btn.querySelector('img')?.getAttribute('src') || '';
         const title = btn.dataset.title || btn.closest('.card')?.querySelector('.card-title')?.textContent?.trim() || 'Dashboard';
         const sub = btn.dataset.sub || '';
@@ -199,14 +271,18 @@
     modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-    // filters + search
-    const filters = document.querySelectorAll('.nav-link');
+    // Search + sort
     const cards = Array.from(document.querySelectorAll('.card'));
     const input = document.getElementById('q');
     const sort = document.getElementById('sort');
 
+    const updateCount = () => {
+      const visible = cards.filter(c => c.style.display !== 'none');
+      const n = visible.length;
+      countEl.textContent = n + (n === 1 ? ' dashboard' : ' dashboards');
+    };
+
     const apply = () => {
-      const active = document.querySelector('.nav-link.is-active')?.dataset.filter || 'all';
       const q = (input.value || '').trim().toLowerCase();
 
       cards.forEach(card => {
@@ -214,11 +290,11 @@
         const title = (card.querySelector('.card-title')?.textContent || '').toLowerCase();
         const desc = (card.querySelector('.card-desc')?.textContent || '').toLowerCase();
 
-        const matchFilter = active === 'all' ? true : tags.includes(active);
         const matchQuery = !q ? true : (title.includes(q) || tags.includes(q) || desc.includes(q));
-
-        card.style.display = (matchFilter && matchQuery) ? '' : 'none';
+        card.style.display = matchQuery ? '' : 'none';
       });
+
+      updateCount();
     };
 
     const doSort = () => {
@@ -233,20 +309,11 @@
 
       if (mode === 'az') visible.sort(byTitle);
       if (mode === 'za') visible.sort((a, b) => -byTitle(a, b));
-
       // recommended: keep original order (DOM order)
+
       const grid = document.getElementById('grid');
       visible.forEach(el => grid.appendChild(el));
     };
-
-    filters.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filters.forEach(b => b.classList.remove('is-active'));
-        btn.classList.add('is-active');
-        apply();
-        doSort();
-      });
-    });
 
     input.addEventListener('input', () => { apply(); doSort(); });
     sort.addEventListener('change', doSort);
