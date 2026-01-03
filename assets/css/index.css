@@ -45,8 +45,8 @@
   --hero-overlay: .2;     /* 0..1 lower = clearer image */
   --hero-overlay-mid: .7;
   --hero-overlay-end: .1;
-  --contact-overlay: .2;
-  --contact-overlay-end: .2;
+  --contact-overlay: .4;
+  --contact-overlay-end: .001;
 }
 
 *{ box-sizing:border-box; margin:0; padding:0; }
