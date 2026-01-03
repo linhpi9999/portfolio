@@ -17,13 +17,18 @@
 
 <body>
   <main>
-
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="back" href="./index.html">← Back to Portfolio</a>
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Dashboards</span>
+      </div>
+    </div>
+  </header>
     <!-- Hero + controls -->
     <section class="masthead">
       <div class="wrap masthead-inner">
-        <div class="back-top">
-          <a class="back-btn" href="./index.html">← Quay lại Portfolio</a>
-        </div>
 
         <h1>Chọn dashboard bạn muốn xem</h1>
         <p class="lead">
@@ -279,7 +284,7 @@
     const updateCount = () => {
       const visible = cards.filter(c => c.style.display !== 'none');
       const n = visible.length;
-      countEl.textContent = n + (n === 1 ? ' dashboard' : ' dashboards');
+      countEl.textContent = `${n} dashboard${n > 1 ? 's' : ''}`;
     };
 
     const apply = () => {
