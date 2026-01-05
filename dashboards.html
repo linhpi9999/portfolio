@@ -2,70 +2,95 @@
 <html lang="vi">
 
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
   <title>Dashboards</title>
 
-  <!-- Font hỗ trợ tiếng Việt tốt, hiện đại -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet" />
-
-  <link href="assets/css/dashboards.css" rel="stylesheet" />
+  <!-- Dùng chung style với index để header/footer giống hệt -->
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="assets/css/dashboards.css" />
 </head>
 
 <body>
-  <main>
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <a class="back" href="./index.html">← Back to Portfolio</a>
-      <div class="brand">
-        <span class="dot"></span>
-        <span>Dashboards</span>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left">
+        <a class="brand" href="index.html#top" aria-label="Go to top">Linh π</a>
+
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+          <a class="nav-link" href="index.html#about">About</a>
+          <a class="nav-link" href="index.html#demo">Gallery</a>
+          <a class="nav-link" href="index.html#projects">Projects</a>
+          <a class="nav-link" href="index.html#awards">Awards</a>
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <button class="icon-btn" type="button" aria-label="Language">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M2 12h20"></path>
+            <path d="M12 2a15 15 0 0 1 0 20"></path>
+            <path d="M12 2a15 15 0 0 0 0 20"></path>
+          </svg>
+        </button>
+
+        <a class="header-link" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn btn--small btn--pill" href="index.html#contact">Contact me</a>
+
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 6h16"></path>
+            <path d="M4 12h16"></path>
+            <path d="M4 18h16"></path>
+          </svg>
+        </button>
       </div>
     </div>
   </header>
+
+  <main id="main">
+    <section id="top"></section>
+
     <!-- Hero + controls -->
     <section class="masthead">
       <div class="wrap masthead-inner">
-
         <h1>Chọn dashboard bạn muốn xem</h1>
         <p class="lead">
           Bộ sưu tập dashboards theo hướng <strong>business-first</strong> — KPI rõ, bố cục gọn, hỗ trợ ra quyết định.
         </p>
-
-        <div class="controls" role="region" aria-label="Tìm kiếm và sắp xếp">
+        <div aria-label="Tìm kiếm và sắp xếp" class="controls" role="region">
           <label class="search" for="q">
             <span aria-hidden="true" class="search-icon">⌕</span>
             <input autocomplete="off" id="q" placeholder="Tìm theo tên hoặc từ khoá…" type="search" />
           </label>
-
         </div>
-
         <div class="hint">Gợi ý: finance, ops, KPI</div>
       </div>
     </section>
-
     <!-- Section head -->
     <section class="section-head">
       <div class="wrap head-inner">
         <div class="head-left">
           <h2>Bộ sưu tập dashboards</h2>
-          <div class="count" id="count" aria-live="polite"></div>
+          <div aria-live="polite" class="count" id="count"></div>
         </div>
-
         <div class="sort">
           <span class="sort-label">Sắp xếp</span>
           <select aria-label="Sắp xếp dashboards" id="sort">
-            <option selected value="recommended">Recommended</option>
+            <option selected="" value="recommended">Recommended</option>
             <option value="az">A → Z</option>
             <option value="za">Z → A</option>
           </select>
         </div>
       </div>
     </section>
-
     <!-- Grid -->
     <section class="wrap grid" id="grid">
       <article class="card" data-tags="project execution workload planning google-sheets link">
@@ -73,145 +98,224 @@
           data-href="https://docs.google.com/spreadsheets/d/1FTJtTsELXQKorrqumjCvG6V9DGvWEQ3_oHq7Gd4IhB4/edit?gid=13369317#gid=13369317"
           data-src="assets/images/project-management-dashboard-pic.png" data-sub="Project / Live link"
           data-title="Project Management Dashboard" type="button">
-          <span class="media-fallback" aria-hidden="true">
+          <span aria-hidden="true" class="media-fallback">
             <span class="media-icon">▦</span>
             <span class="media-text">Preview đang cập nhật</span>
           </span>
-          <img loading="lazy" alt="Project Management Dashboard"
+          <img alt="Project Management Dashboard" loading="lazy"
             src="assets/images/project-management-dashboard-pic.png" />
         </button>
-
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">Project Management Dashboard</h3>
             <span class="badge">Live</span>
           </div>
           <p class="card-desc">Track tiến độ, task completion và workload theo team/owner để điều phối nguồn lực.</p>
-          <div class="card-tags" aria-label="Tags">
+          <div aria-label="Tags" class="card-tags">
             <span class="chip">Project</span><span class="chip">Workload</span><span class="chip">Planning</span>
           </div>
         </div>
       </article>
-
       <article class="card" data-tags="order kpi performance executive summary business">
         <button class="card-media" data-src="assets/images/dashboard-product-management.png" data-sub="Business"
           data-title="Order Management Dashboard" type="button">
-          <span class="media-fallback" aria-hidden="true">
+          <span aria-hidden="true" class="media-fallback">
             <span class="media-icon">▦</span>
             <span class="media-text">Preview đang cập nhật</span>
           </span>
-          <img loading="lazy" alt="Order Management Dashboard" src="assets/images/dashboard-product-management.png" />
+          <img alt="Order Management Dashboard" loading="lazy" src="assets/images/dashboard-product-management.png" />
         </button>
-
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">Order Management Dashboard</h3>
             <span class="badge">KPI</span>
           </div>
           <p class="card-desc">Theo dõi việc nhập xuất của các đơn hàng.</p>
-          <div class="card-tags" aria-label="Tags">
+          <div aria-label="Tags" class="card-tags">
             <span class="chip">Business</span><span class="chip">KPI</span><span class="chip">Executive</span>
           </div>
         </div>
       </article>
-
       <article class="card" data-tags="product adoption retention cohort usage segment">
         <button class="card-media" data-src="assets/images/product-intelligence.png" data-sub="Product"
           data-title="Product Intelligence Dashboard" type="button">
-          <span class="media-fallback" aria-hidden="true">
+          <span aria-hidden="true" class="media-fallback">
             <span class="media-icon">▦</span>
             <span class="media-text">Preview đang cập nhật</span>
           </span>
-          <img loading="lazy" alt="Product Intelligence Dashboard" src="assets/images/product-intelligence.png" />
+          <img alt="Product Intelligence Dashboard" loading="lazy" src="assets/images/product-intelligence.png" />
         </button>
-
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">Product Intelligence Dashboard</h3>
             <span class="badge">Product</span>
           </div>
           <p class="card-desc">Theo dõi adoption, retention cohorts và usage theo segment để định hướng roadmap.</p>
-          <div class="card-tags" aria-label="Tags">
+          <div aria-label="Tags" class="card-tags">
             <span class="chip">Product</span><span class="chip">Retention</span><span class="chip">Cohort</span>
           </div>
         </div>
       </article>
-
       <article class="card" data-tags="marketing campaign roi conversion channel performance">
         <button class="card-media" data-src="assets/images/marketing-campaign.png" data-sub="Marketing"
           data-title="Marketing Campaign Dashboard" type="button">
-          <span class="media-fallback" aria-hidden="true">
+          <span aria-hidden="true" class="media-fallback">
             <span class="media-icon">▦</span>
             <span class="media-text">Preview đang cập nhật</span>
           </span>
-          <img loading="lazy" alt="Marketing Campaign Dashboard" src="assets/images/marketing-campaign.png" />
+          <img alt="Marketing Campaign Dashboard" loading="lazy" src="assets/images/marketing-campaign.png" />
         </button>
-
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">Marketing Campaign Dashboard</h3>
             <span class="badge">Growth</span>
           </div>
           <p class="card-desc">Giám sát ROI, conversion rate và hiệu quả theo kênh để tối ưu phân bổ ngân sách.</p>
-          <div class="card-tags" aria-label="Tags">
+          <div aria-label="Tags" class="card-tags">
             <span class="chip">Marketing</span><span class="chip">ROI</span><span class="chip">Channel</span>
           </div>
         </div>
       </article>
-
       <article class="card" data-tags="finance revenue expense profit margin budget forecast">
         <button class="card-media" data-src="assets/images/financial-summary.png" data-sub="Finance"
           data-title="Financial Summary Dashboard" type="button">
-          <span class="media-fallback" aria-hidden="true">
+          <span aria-hidden="true" class="media-fallback">
             <span class="media-icon">▦</span>
             <span class="media-text">Preview đang cập nhật</span>
           </span>
-          <img loading="lazy" alt="Financial Summary Dashboard" src="assets/images/financial-summary.png" />
+          <img alt="Financial Summary Dashboard" loading="lazy" src="assets/images/financial-summary.png" />
         </button>
-
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">Financial Summary Dashboard</h3>
             <span class="badge">Finance</span>
           </div>
           <p class="card-desc">Tổng quan expense/revenue, profit margins và budget tracking để kiểm soát hiệu quả.</p>
-          <div class="card-tags" aria-label="Tags">
+          <div aria-label="Tags" class="card-tags">
             <span class="chip">Finance</span><span class="chip">Budget</span><span class="chip">Margin</span>
           </div>
         </div>
       </article>
-
       <article class="card" data-tags="ops operation sla inventory efficiency monitoring">
         <button class="card-media" data-src="assets/images/operations-monitor.png" data-sub="Ops"
           data-title="Operations Monitoring Dashboard" type="button">
-          <span class="media-fallback" aria-hidden="true">
+          <span aria-hidden="true" class="media-fallback">
             <span class="media-icon">▦</span>
             <span class="media-text">Preview đang cập nhật</span>
           </span>
-          <img loading="lazy" alt="Operations Monitoring Dashboard" src="assets/images/operations-monitor.png" />
+          <img alt="Operations Monitoring Dashboard" loading="lazy" src="assets/images/operations-monitor.png" />
         </button>
-
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">Operations Monitoring Dashboard</h3>
             <span class="badge">Ops</span>
           </div>
           <p class="card-desc">Theo dõi efficiency, inventory movement và SLA compliance để phát hiện issue sớm.</p>
-          <div class="card-tags" aria-label="Tags">
+          <div aria-label="Tags" class="card-tags">
             <span class="chip">Ops</span><span class="chip">SLA</span><span class="chip">Monitoring</span>
           </div>
         </div>
       </article>
     </section>
-
     <section class="back-bottom">
       <div class="wrap">
         <a class="back-btn" href="./index.html">← Quay lại Portfolio</a>
       </div>
     </section>
+
   </main>
 
-  <!-- Modal -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="index.html#demo">Demo Gallery</a>
+          <a href="index.html#projects">Featured Projects</a>
+          <a href="index.html#awards">Awards</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <a href="index.html#projects">Dashboard Systems</a>
+          <a href="index.html#projects">Datamart Design</a>
+          <a href="index.html#projects">Business Insights</a>
+          <a href="index.html#projects">AI Analytics</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="index.html#about">About Me</a>
+          <a href="index.html#projects">Case Studies</a>
+          <a href="index.html#demo">Templates</a>
+          <a href="index.html#projects">Notes</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="index.html#contact">Work with me</a>
+          <a href="mailto:linhpi9999@gmail.com">Email support</a>
+          <a href="index.html#contact">FAQ</a>
+          <a class="to-top" href="#top">Back to top ↑</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html#about">Story</a>
+          <a href="index.html#projects">Portfolio</a>
+          <a href="index.html#awards">Recognition</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
+        <div class="footer-brandcol">
+          <div class="footer-logo">Linh</div>
+          <p class="footer-desc">
+            Data Analytics Manager — dashboards, datamarts, business insights &amp; AI-powered analytics.
+            I build clean, scalable data products that help teams move faster and decide with confidence.
+          </p>
+          <div class="footer-quick">
+            <a class="footer-pill" href="index.html#projects">View work</a>
+            <a class="footer-pill footer-pill--ghost" href="index.html#contact">Let’s talk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div class="footer-social" aria-label="Social links">
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path
+                d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6v6.3h-4V16c0-1.2 0-2.8-1.7-2.8S13 14.6 13 16v5h-4V9z" />
+            </svg>
+          </a>
+          <a href="https://github.com/yourprofile" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 .5C5.7.5.6 5.7.6 12.2c0 5.2 3.4 9.6 8.1 11.2.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.9 2.1 3.6 1.5.1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.4-2.3 1.1-3.1-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 1.2.9-.3 1.8-.4 2.7-.4.9 0 1.8.1 2.7.4 2.1-1.4 3-1.2 3-1.2.6 1.6.2 2.8.1 3.1.7.8 1.1 1.8 1.1 3.1 0 4.6-2.7 5.6-5.3 5.9.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.7-1.6 8.1-6 8.1-11.2C23.4 5.7 18.3.5 12 .5z" />
+            </svg>
+          </a>
+          <a href="mailto:linhpi9999@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16v16H4z"></path>
+              <path d="m22 6-10 7L2 6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer-legal">
+          <a href="#" class="legal-link">Terms of Use</a>
+          <a href="#" class="legal-link">Privacy Policy</a>
+          <span class="copyright">© <span id="year"></span> Linh</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
   <dialog class="modal" id="modal">
     <button aria-label="Close" class="modal-close" type="button">✕</button>
     <div class="modal-head">
@@ -326,6 +430,32 @@
     // init
     apply();
   </script>
+
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mobile nav
+    (function () {
+      const btn = document.querySelector('.menu-btn');
+      const nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+
+      btn.addEventListener('click', function () {
+        const open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      nav.addEventListener('click', function (e) {
+        const t = e.target;
+        if (t && t.tagName === 'A' && nav.classList.contains('is-open')) {
+          nav.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+
 </body>
 
 </html>

@@ -55,57 +55,7 @@ input,
 select {
   font: inherit;
 }
-/* ----- Topbar ----- */
-.topbar{
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  backdrop-filter: blur(10px);
-  background: rgba(248, 250, 252, 0.75);
-  border-bottom: 1px solid var(--border);
-}
-.topbar-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding: 14px 0;
-}
 
-.back{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  font-weight: 700;
-  color: var(--primary);
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid transparent;
-  transition: background .2s ease, border-color .2s ease, transform .2s ease;
-}
-.back:hover{
-  background: var(--primarySoft);
-  border-color: var(--border);
-  transform: translateY(-1px);
-}
-.back:focus-visible{
-  outline: 3px solid rgba(56,189,248,0.45);
-  outline-offset: 2px;
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight: 900;
-  letter-spacing: .2px;
-  color: var(--heading);
-}
-.dot{
-  width:10px; height:10px;
-  border-radius:999px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  box-shadow: 0 0 0 6px rgba(31,58,95,0.10);
-}
 .wrap {
   max-width: var(--wrap);
   margin: 0 auto;
@@ -146,6 +96,10 @@ select {
 
 .back-bottom {
   padding: 30px 0 60px;
+}
+.back-bottom .wrap {
+  display: flex;
+  justify-content: center;
 }
 
 .back-btn {
