@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
   <meta name="color-scheme" content="light" />
   <title>Dashboards</title>
 
-  <!-- Dùng chung style với index để header/footer giống hệt -->
+  <!-- Shared styles with index so header/footer match exactly -->
   <link rel="stylesheet" href="assets/css/index.css" />
   <link rel="stylesheet" href="assets/css/dashboards.css" />
 </head>
@@ -61,29 +61,29 @@
     <!-- Hero + controls -->
     <section class="masthead">
       <div class="wrap masthead-inner">
-        <h1>Chọn dashboard bạn muốn xem</h1>
+        <h1>Choose a dashboard to explore</h1>
         <p class="lead">
-          Bộ sưu tập dashboards theo hướng <strong>business-first</strong> — KPI rõ, bố cục gọn, hỗ trợ ra quyết định.
+          A <strong>business-first</strong> dashboard collection — clear KPIs, clean layouts, built for decision-making.
         </p>
-        <div aria-label="Tìm kiếm và sắp xếp" class="controls" role="region">
+        <div aria-label="Search and sort" class="controls" role="region">
           <label class="search" for="q">
             <span aria-hidden="true" class="search-icon">⌕</span>
-            <input autocomplete="off" id="q" placeholder="Tìm theo tên hoặc từ khoá…" type="search" />
+            <input autocomplete="off" id="q" placeholder="Search by name or keyword…" type="search" />
           </label>
         </div>
-        <div class="hint">Gợi ý: finance, ops, KPI</div>
+        <div class="hint">Tip: finance, ops, KPI</div>
       </div>
     </section>
     <!-- Section head -->
     <section class="section-head">
       <div class="wrap head-inner">
         <div class="head-left">
-          <h2>Bộ sưu tập dashboards</h2>
+          <h2>Dashboard collection</h2>
           <div aria-live="polite" class="count" id="count"></div>
         </div>
         <div class="sort">
-          <span class="sort-label">Sắp xếp</span>
-          <select aria-label="Sắp xếp dashboards" id="sort">
+          <span class="sort-label">Sort</span>
+          <select aria-label="Sort dashboards" id="sort">
             <option selected="" value="recommended">Recommended</option>
             <option value="az">A → Z</option>
             <option value="za">Z → A</option>
@@ -100,7 +100,7 @@
           data-title="Project Management Dashboard" type="button">
           <span aria-hidden="true" class="media-fallback">
             <span class="media-icon">▦</span>
-            <span class="media-text">Preview đang cập nhật</span>
+            <span class="media-text">Preview coming soon</span>
           </span>
           <img alt="Project Management Dashboard" loading="lazy"
             src="assets/images/project-management-dashboard-pic.png" />
@@ -110,7 +110,7 @@
             <h3 class="card-title">Project Management Dashboard</h3>
             <span class="badge">Live</span>
           </div>
-          <p class="card-desc">Track tiến độ, task completion và workload theo team/owner để điều phối nguồn lực.</p>
+          <p class="card-desc">Track progress, task completion, and workload by team/owner to balance resources.</p>
           <div aria-label="Tags" class="card-tags">
             <span class="chip">Project</span><span class="chip">Workload</span><span class="chip">Planning</span>
           </div>
@@ -121,7 +121,7 @@
           data-title="Order Management Dashboard" type="button">
           <span aria-hidden="true" class="media-fallback">
             <span class="media-icon">▦</span>
-            <span class="media-text">Preview đang cập nhật</span>
+            <span class="media-text">Preview coming soon</span>
           </span>
           <img alt="Order Management Dashboard" loading="lazy" src="assets/images/dashboard-product-management.png" />
         </button>
@@ -130,7 +130,7 @@
             <h3 class="card-title">Order Management Dashboard</h3>
             <span class="badge">KPI</span>
           </div>
-          <p class="card-desc">Theo dõi việc nhập xuất của các đơn hàng.</p>
+          <p class="card-desc">Monitor order inflow/outflow and fulfillment status.</p>
           <div aria-label="Tags" class="card-tags">
             <span class="chip">Business</span><span class="chip">KPI</span><span class="chip">Executive</span>
           </div>
@@ -141,7 +141,7 @@
           data-title="Product Intelligence Dashboard" type="button">
           <span aria-hidden="true" class="media-fallback">
             <span class="media-icon">▦</span>
-            <span class="media-text">Preview đang cập nhật</span>
+            <span class="media-text">Preview coming soon</span>
           </span>
           <img alt="Product Intelligence Dashboard" loading="lazy" src="assets/images/product-intelligence.png" />
         </button>
@@ -150,7 +150,7 @@
             <h3 class="card-title">Product Intelligence Dashboard</h3>
             <span class="badge">Product</span>
           </div>
-          <p class="card-desc">Theo dõi adoption, retention cohorts và usage theo segment để định hướng roadmap.</p>
+          <p class="card-desc">Track adoption, retention cohorts, and usage by segment to guide the roadmap.</p>
           <div aria-label="Tags" class="card-tags">
             <span class="chip">Product</span><span class="chip">Retention</span><span class="chip">Cohort</span>
           </div>
@@ -161,7 +161,7 @@
           data-title="Marketing Campaign Dashboard" type="button">
           <span aria-hidden="true" class="media-fallback">
             <span class="media-icon">▦</span>
-            <span class="media-text">Preview đang cập nhật</span>
+            <span class="media-text">Preview coming soon</span>
           </span>
           <img alt="Marketing Campaign Dashboard" loading="lazy" src="assets/images/marketing-campaign.png" />
         </button>
@@ -170,7 +170,7 @@
             <h3 class="card-title">Marketing Campaign Dashboard</h3>
             <span class="badge">Growth</span>
           </div>
-          <p class="card-desc">Giám sát ROI, conversion rate và hiệu quả theo kênh để tối ưu phân bổ ngân sách.</p>
+          <p class="card-desc">Monitor ROI, conversion rate, and channel performance to optimize budget allocation.</p>
           <div aria-label="Tags" class="card-tags">
             <span class="chip">Marketing</span><span class="chip">ROI</span><span class="chip">Channel</span>
           </div>
@@ -181,7 +181,7 @@
           data-title="Financial Summary Dashboard" type="button">
           <span aria-hidden="true" class="media-fallback">
             <span class="media-icon">▦</span>
-            <span class="media-text">Preview đang cập nhật</span>
+            <span class="media-text">Preview coming soon</span>
           </span>
           <img alt="Financial Summary Dashboard" loading="lazy" src="assets/images/financial-summary.png" />
         </button>
@@ -190,7 +190,7 @@
             <h3 class="card-title">Financial Summary Dashboard</h3>
             <span class="badge">Finance</span>
           </div>
-          <p class="card-desc">Tổng quan expense/revenue, profit margins và budget tracking để kiểm soát hiệu quả.</p>
+          <p class="card-desc">Overview of expenses/revenue, profit margins, and budget tracking for better control.</p>
           <div aria-label="Tags" class="card-tags">
             <span class="chip">Finance</span><span class="chip">Budget</span><span class="chip">Margin</span>
           </div>
@@ -201,7 +201,7 @@
           data-title="Operations Monitoring Dashboard" type="button">
           <span aria-hidden="true" class="media-fallback">
             <span class="media-icon">▦</span>
-            <span class="media-text">Preview đang cập nhật</span>
+            <span class="media-text">Preview coming soon</span>
           </span>
           <img alt="Operations Monitoring Dashboard" loading="lazy" src="assets/images/operations-monitor.png" />
         </button>
@@ -210,7 +210,7 @@
             <h3 class="card-title">Operations Monitoring Dashboard</h3>
             <span class="badge">Ops</span>
           </div>
-          <p class="card-desc">Theo dõi efficiency, inventory movement và SLA compliance để phát hiện issue sớm.</p>
+          <p class="card-desc">Track efficiency, inventory movement, and SLA compliance to spot issues early.</p>
           <div aria-label="Tags" class="card-tags">
             <span class="chip">Ops</span><span class="chip">SLA</span><span class="chip">Monitoring</span>
           </div>
@@ -219,7 +219,7 @@
     </section>
     <section class="back-bottom">
       <div class="wrap">
-        <a class="back-btn" href="./index.html">← Quay lại Portfolio</a>
+        <a class="back-btn" href="./index.html">← Back to Portfolio</a>
       </div>
     </section>
 
@@ -413,7 +413,7 @@
       const byTitle = (a, b) => {
         const ta = (a.querySelector('.card-title')?.textContent || '').trim().toLowerCase();
         const tb = (b.querySelector('.card-title')?.textContent || '').trim().toLowerCase();
-        return ta.localeCompare(tb, 'vi');
+        return ta.localeCompare(tb, 'en');
       };
 
       if (mode === 'az') visible.sort(byTitle);
