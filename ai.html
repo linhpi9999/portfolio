@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
+  <title>AI Applications — Workflow Ecosystem</title>
+
+  <!-- Shared styles with index so header/footer match exactly -->
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <!-- AI Applications page styles (aligned to dashboards layout) -->
+  <link rel="stylesheet" href="assets/css/ai.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left">
+        <a class="brand" href="index.html#top" aria-label="Go to top">Linh π</a>
+
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+          <a class="nav-link" href="index.html#about">About</a>
+          <a class="nav-link" href="index.html#demo">Gallery</a>
+          <a class="nav-link" href="index.html#projects">Projects</a>
+          <a class="nav-link" href="index.html#awards">Awards</a>
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <button class="icon-btn" type="button" aria-label="Language">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M2 12h20"></path>
+            <path d="M12 2a15 15 0 0 1 0 20"></path>
+            <path d="M12 2a15 15 0 0 0 0 20"></path>
+          </svg>
+        </button>
+
+        <a class="header-link" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn btn--small btn--pill" href="index.html#contact">Contact me</a>
+
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 6h16"></path>
+            <path d="M4 12h16"></path>
+            <path d="M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top"></section>
+
+    <!-- Masthead (same structure as dashboards/datamart) -->
+    <section class="masthead dm-masthead">
+      <div class="wrap masthead-inner">
+
+        <h1>AI Applications: Workflow Ecosystem</h1>
+        <p class="lead">
+          A production‑ready ecosystem of AI workflows that <strong>automate operations</strong>, <strong>support customer care</strong>,
+          and <strong>accelerate lookup, classification, and data normalization</strong> — grouped into three clusters:
+          <strong>Chatbots</strong>, <strong>Information Retrieval</strong>, and <strong>AI Ops Platform</strong>.
+        </p>
+
+        <div class="controls dm-actions" role="region" aria-label="Quick actions">
+          <a class="dm-action" href="#overview">Overview</a>
+          <a class="dm-action" href="#chatbots">Chatbots</a>
+          <a class="dm-action" href="#retrieval">Retrieval</a>
+          <a class="dm-action" href="#ops-platform">Ops Platform</a>
+          <a class="dm-action dm-action--primary" href="#metrics">Key Metrics →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="wrap dm-content">
+
+      <section class="dm-section" id="overview">
+        <h3 class="dm-h3">1) Overview</h3>
+        <p class="dm-p">
+          We built AI workflows to reduce manual handling, standardize decision logic, and provide consistent answers across channels.
+          The ecosystem is organized into three product clusters:
+          <strong>Chatbots</strong> (customer service & internal support), <strong>Batch Lookup</strong> (template‑based research),
+          and <strong>AI Operations Platform</strong> (agents + tooling for workflow orchestration and data normalization).
+        </p>
+
+        <div class="dm-grid-2">
+          <div class="dm-card">
+            <div class="dm-card-title">What this ecosystem delivers</div>
+            <ul class="dm-list">
+              <li><strong>Load reduction</strong> for Customer Service via self‑serve responses and structured flows</li>
+              <li><strong>Faster operations</strong> with automation for repetitive, policy‑driven tasks</li>
+              <li><strong>Cleaner data</strong> through normalization, tagging, and taxonomy classification</li>
+              <li><strong>Traceable decisioning</strong> using workflow nodes, intents, and guarded fallbacks</li>
+            </ul>
+          </div>
+
+          <figure class="dm-figure" aria-label="Ecosystem map">
+            <div class="figure-pad">
+              <svg viewBox="0 0 920 420" role="img" aria-label="AI workflow ecosystem map">
+                <defs>
+                  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#1F3A5F" stop-opacity="0.12"/>
+                    <stop offset="1" stop-color="#38BDF8" stop-opacity="0.16"/>
+                  </linearGradient>
+                </defs>
+
+                <rect x="16" y="16" width="888" height="388" rx="22" fill="url(#g1)" stroke="#E2E8F0"/>
+                <text x="40" y="58" font-size="18" font-weight="800" fill="#0F172A">Three clusters</text>
+
+                <!-- columns -->
+                <g>
+                  <rect x="40" y="88" width="260" height="280" rx="18" fill="#FFFFFF" stroke="#E2E8F0"/>
+                  <text x="62" y="126" font-size="16" font-weight="900" fill="#0F172A">Chatbots</text>
+                  <text x="62" y="152" font-size="13" font-weight="700" fill="#64748B">CS + Internal</text>
+
+                  <rect x="330" y="88" width="260" height="280" rx="18" fill="#FFFFFF" stroke="#E2E8F0"/>
+                  <text x="352" y="126" font-size="16" font-weight="900" fill="#0F172A">Information Retrieval</text>
+                  <text x="352" y="152" font-size="13" font-weight="700" fill="#64748B">Template-based lookup</text>
+
+                  <rect x="620" y="88" width="260" height="280" rx="18" fill="#FFFFFF" stroke="#E2E8F0"/>
+                  <text x="642" y="126" font-size="16" font-weight="900" fill="#0F172A">AI Ops Platform</text>
+                  <text x="642" y="152" font-size="13" font-weight="700" fill="#64748B">Agents + workflows</text>
+                </g>
+
+                <!-- items -->
+                <g font-size="13" fill="#334155">
+                  <text x="62" y="196">• GC Bot</text>
+                  <text x="62" y="222">• GAM Bot</text>
+                  <text x="62" y="248">• Internal “Know‑It‑All”</text>
+
+                  <text x="352" y="196">• Bulk lookup (In progress)</text>
+                  <text x="352" y="222">• Company / locality profiling</text>
+                  <text x="352" y="248">• Output: consolidated file</text>
+
+                  <text x="642" y="196">• Solution Assistant (4 agents)</text>
+                  <text x="642" y="222">• Vision config normalization</text>
+                  <text x="642" y="248">• Insight → Solution mapping</text>
+                  <text x="642" y="274">• Tag extraction & Smart Tagger</text>
+                </g>
+
+                <!-- connectors -->
+                <g stroke="#CBD5E1" stroke-width="2" fill="none">
+                  <path d="M300 228 H330"/>
+                  <path d="M590 228 H620"/>
+                </g>
+              </svg>
+            </div>
+            <figcaption>High-level product map: three clusters connected by shared data and workflow infrastructure.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="dm-section" id="metrics">
+        <h3 class="dm-h3">2) Key metrics at a glance</h3>
+        <p class="dm-p">
+          Snapshot of scale and quality signals across production and in-progress applications.
+        </p>
+
+        <div class="kpi-grid" role="list" aria-label="Key metrics">
+          <div class="kpi" role="listitem">
+            <div class="kpi-top">
+              <div class="kpi-label">GC Bot volume</div>
+              <span class="badge" title="Production">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 12h16"></path><path d="M12 4v16"></path>
+                </svg>
+                On prod
+              </span>
+            </div>
+            <div class="kpi-value">~30k–35k</div>
+            <div class="kpi-note">Messages per working day handled in the chat channel.</div>
+          </div>
+
+          <div class="kpi" role="listitem">
+            <div class="kpi-top">
+              <div class="kpi-label">Bot reply share</div>
+              <span class="badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M3 12h18"></path><path d="M12 3v18"></path>
+                </svg>
+                CS assistance
+              </span>
+            </div>
+            <div class="kpi-value">~20–25%</div>
+            <div class="kpi-note">Equivalent to ~3k–4k messages/day answered by the bot.</div>
+          </div>
+
+          <div class="kpi" role="listitem">
+            <div class="kpi-top">
+              <div class="kpi-label">Active workflow nodes</div>
+              <span class="badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 7v5l3 3"></path>
+                </svg>
+                N8N Nodes
+              </span>
+            </div>
+            <div class="kpi-value">~300</div>
+            <div class="kpi-note">Nodes actively running in production workflows.</div>
+          </div>
+
+          <div class="kpi" role="listitem">
+            <div class="kpi-top">
+              <div class="kpi-label">Workflow error rate</div>
+              <span class="badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 9v4"></path><path d="M12 17h.01"></path>
+                  <path d="M10.3 4.3h3.4L21 11.6v3.4L13.7 22h-3.4L3 15v-3.4z"></path>
+                </svg>
+                Resilient calls
+              </span>
+            </div>
+            <div class="kpi-value">~1%</div>
+            <div class="kpi-note">Mostly retry-related API failures.</div>
+          </div>
+        </div>
+
+        <div class="kpi-grid" role="list" aria-label="More metrics">
+          <div class="kpi" role="listitem">
+            <div class="kpi-top">
+              <div class="kpi-label">Insight → Solution mapping</div>
+              <span class="badge">Evaluation</span>
+            </div>
+            <div class="kpi-value">Recall ~30%</div>
+            <div class="kpi-note">Precision &gt; 80% on current knowledge-base mapping.</div>
+          </div>
+
+          <div class="kpi" role="listitem">
+            <div class="kpi-top">
+              <div class="kpi-label">Shop-name tag extraction</div>
+              <span class="badge">In progress</span>
+            </div>
+            <div class="kpi-value">&gt;90%</div>
+            <div class="kpi-note">Accuracy &gt; 90% on 7/7 fields; some fields improved from 22.85% → 94.1%.</div>
+          </div>
+
+          <div class="kpi" role="listitem">
+            <div class="kpi-top">
+              <div class="kpi-label">Smart Tagger taxonomy</div>
+              <span class="badge">On prod</span>
+            </div>
+            <div class="kpi-value">10 / 153 / 1,759</div>
+            <div class="kpi-note">Category levels: L1 / L2 / L3 used for classification.</div>
+          </div>
+
+          <div class="kpi" role="listitem">
+            <div class="kpi-top">
+              <div class="kpi-label">Unclear intents</div>
+              <span class="badge">GC Bot</span>
+            </div>
+            <div class="kpi-value">~15–20%</div>
+            <div class="kpi-note">Messages falling into “Other / Unknown” intent bucket.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dm-section" id="chatbots">
+        <h3 class="dm-h3">3) Chatbots (Customer Service & Internal)</h3>
+        <p class="dm-p">
+          The chatbot cluster focuses on guided issue handling, order tracking, and fast policy answers, with guardrails that hand over
+          to humans when sentiment is negative or intent/order context is missing.
+        </p>
+
+        <div class="product-grid" aria-label="Chatbots">
+          <article class="product-card">
+            <div class="product-head">
+              <div>
+                <h4 class="product-title">GC Bot </h4>
+                <p class="product-sub">
+                  Supports customer service agents in shop support: order issues, delivery follow-ups, basic policies, and incident intake.
+                </p>
+              </div>
+            </div>
+
+            <div class="product-meta" aria-label="GC Bot metrics">
+              <span class="metric-chip"><span>Chatflows</span> 2</span>
+              <span class="metric-chip"><span>Workflows</span> 7 (L2) + 34 (L3)</span>
+              <span class="metric-chip"><span>Intents</span> 9 (L1) + 50 (L2)</span>
+              <span class="metric-chip"><span>Nodes</span> ~300</span>
+            </div>
+
+            <ul class="dm-list">
+              <li><strong>Default handover rules</strong>: sentiment &lt; 3/10, unknown intent, or missing order code</li>
+              <li><strong>Popular requests</strong> (delivery follow-up, COD, re-delivery): &gt; 40% of traffic</li>
+              <li><strong>Strong answer rates</strong>: common requests often &gt; 40%; info queries often &gt; 70%</li>
+              <li><strong>Disable rate</strong>: ~60% (handover to shop/human when needed)</li>
+            </ul>
+          </article>
+
+          <article class="product-card">
+            <div class="product-head">
+              <div>
+                <h4 class="product-title">GAM Bot</h4>
+                <p class="product-sub">
+                  Shop-side chatbot for end-user conversations (sales, order changes, after-sales, product/shop information, logistics).
+                  Development is currently paused.
+                </p>
+              </div>
+            </div>
+
+            <div class="product-meta" aria-label="GAM Bot metrics">
+              <span class="metric-chip"><span>Chatflows</span> 2</span>
+              <span class="metric-chip"><span>Workflows</span> 6 (L2) + 28 (L3)</span>
+              <span class="metric-chip"><span>Intents</span> 12 (L1) + 34 (L2)</span>
+            </div>
+
+            <ul class="dm-list">
+              <li>Default handover: sentiment &lt; 3/10, or unknown intent</li>
+              <li>Designed for conversion and shop support automation</li>
+              <li>Status: paused / pending restart</li>
+            </ul>
+          </article>
+
+          <article class="product-card">
+            <div class="product-head">
+              <div>
+                <h4 class="product-title">Internal “Know‑It‑All”</h4>
+                <p class="product-sub">
+                  Internal assistant for employees (e.g., HR) that automatically detects intent and routes requests to the right lookup/workflow.
+                </p>
+              </div>
+            </div>
+
+            <div class="product-meta" aria-label="Know-It-All metrics">
+              <span class="metric-chip"><span>Deployed intents</span> 42</span>
+              <span class="metric-chip"><span>Primary goal</span> Auto‑routing</span>
+            </div>
+
+            <ul class="dm-list">
+              <li>Intent-first routing to reduce time-to-answer for internal queries</li>
+              <li>Designed to plug into knowledge bases and operational tools</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="dm-grid-2">
+          <figure class="dm-figure" aria-label="GC Bot flow hierarchy">
+            <div class="figure-pad">
+              <svg viewBox="0 0 920 420" role="img" aria-label="GC Bot workflow hierarchy diagram">
+                <rect x="18" y="18" width="884" height="384" rx="22" fill="#FFFFFF" stroke="#E2E8F0"/>
+                <text x="44" y="66" font-size="18" font-weight="900" fill="#0F172A">GC Bot hierarchy</text>
+                <text x="44" y="92" font-size="13" font-weight="700" fill="#64748B">2 chatflows → 7 L2 workflows → 34 L3 workflows → ~300 nodes</text>
+
+                <!-- nodes -->
+                <g fill="#F1F5F9" stroke="#E2E8F0">
+                  <rect x="60" y="130" width="240" height="72" rx="16"/>
+                  <rect x="60" y="224" width="240" height="72" rx="16"/>
+                  <rect x="340" y="160" width="240" height="72" rx="16"/>
+                  <rect x="340" y="254" width="240" height="72" rx="16"/>
+                  <rect x="620" y="130" width="240" height="72" rx="16"/>
+                  <rect x="620" y="224" width="240" height="72" rx="16"/>
+                </g>
+
+                <g font-size="14" fill="#0F172A" font-weight="900">
+                  <text x="82" y="160">Chatflow L1</text>
+                  <text x="82" y="254">Chatflow L1</text>
+                  <text x="362" y="190">Workflows (L2)</text>
+                  <text x="362" y="284">Workflows (L2)</text>
+                  <text x="642" y="160">Workflows (L3)</text>
+                  <text x="642" y="254">Workflows (L3)</text>
+                </g>
+
+                <g font-size="13" fill="#334155" font-weight="700">
+                  <text x="82" y="182">C2C / B2C</text>
+                  <text x="82" y="276">Entry routing</text>
+                  <text x="362" y="212">Issue domains</text>
+                  <text x="362" y="306">Policy intents</text>
+                  <text x="642" y="182">Fine-grained cases</text>
+                  <text x="642" y="276">API + rule nodes</text>
+                </g>
+
+                <!-- connectors -->
+                <g stroke="#CBD5E1" stroke-width="2" fill="none">
+                  <path d="M300 166 H340"/>
+                  <path d="M300 260 H340"/>
+                  <path d="M580 196 H620"/>
+                  <path d="M580 290 H620"/>
+                </g>
+
+                <!-- footer note -->
+                <text x="44" y="372" font-size="12.5" font-weight="700" fill="#64748B">
+                  Guardrails: sentiment &lt; 3/10 or missing intent/order → handover to humans.
+                </text>
+              </svg>
+            </div>
+            <figcaption>Production chatbot design: hierarchical workflows with guardrails and human handover conditions.</figcaption>
+          </figure>
+
+          <div class="dm-card">
+            <div class="dm-card-title">Reliability and safety rails</div>
+            <ul class="dm-list">
+              <li><strong>Intent detection</strong>: structured intent groups (L1/L2) to reduce ambiguity</li>
+              <li><strong>Fallback logic</strong>: unknown intent routed to human/shop handling</li>
+              <li><strong>Sentiment-based guardrails</strong>: negative sentiment triggers escalation</li>
+              <li><strong>Operational resilience</strong>: retries + monitoring; ~1% workflow errors, mainly API retries</li>
+            </ul>
+
+            <div class="callout">
+              <b>Opportunity:</b> reduce “Unknown/Other” intents (~15–20%) by expanding intent coverage and adding lightweight clarification questions.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dm-section" id="retrieval">
+        <h3 class="dm-h3">4) Information Retrieval (Batch Lookup)</h3>
+        <p class="dm-p">
+          A template-based “ChatGPT/Perplexity style” workflow that processes a list of entities and fields, returning a consolidated output file.
+          Designed for scalable research tasks (e.g., company profiling, locality attributes) with consistent schema and export.
+        </p>
+
+        <div class="dm-grid-2">
+          <div class="dm-card">
+            <div class="dm-card-title">Typical input → output</div>
+            <ul class="dm-list">
+              <li><strong>Input</strong>: list of entities (shops / localities) + list of fields to retrieve</li>
+              <li><strong>Process</strong>: query → validate → enrich → normalize</li>
+              <li><strong>Output</strong>: one consolidated file (table) ready for analysis</li>
+            </ul>
+          </div>
+
+          <figure class="dm-figure" aria-label="Batch lookup pipeline">
+            <div class="figure-pad">
+              <svg viewBox="0 0 920 420" role="img" aria-label="Batch lookup pipeline diagram">
+                <rect x="18" y="18" width="884" height="384" rx="22" fill="#FFFFFF" stroke="#E2E8F0"/>
+                <text x="44" y="66" font-size="18" font-weight="900" fill="#0F172A">Batch lookup workflow</text>
+                <text x="44" y="92" font-size="13" font-weight="700" fill="#64748B">List in → templated queries → normalized table out</text>
+
+                <g>
+                  <rect x="70" y="160" width="180" height="80" rx="16" fill="#F1F5F9" stroke="#E2E8F0"/>
+                  <rect x="290" y="160" width="180" height="80" rx="16" fill="#F1F5F9" stroke="#E2E8F0"/>
+                  <rect x="510" y="160" width="180" height="80" rx="16" fill="#F1F5F9" stroke="#E2E8F0"/>
+                  <rect x="730" y="160" width="120" height="80" rx="16" fill="#F1F5F9" stroke="#E2E8F0"/>
+                </g>
+
+                <g font-size="14" fill="#0F172A" font-weight="900">
+                  <text x="96" y="196">Entity list</text>
+                  <text x="310" y="196">Template query</text>
+                  <text x="540" y="196">Normalize</text>
+                  <text x="748" y="196">Export</text>
+                </g>
+
+                <g font-size="13" fill="#334155" font-weight="700">
+                  <text x="96" y="220">shops / places</text>
+                  <text x="310" y="220">fields + sources</text>
+                  <text x="540" y="220">schema + QA</text>
+                  <text x="748" y="220">CSV / XLSX</text>
+                </g>
+
+                <g stroke="#CBD5E1" stroke-width="2" fill="none">
+                  <path d="M250 200 H290"/>
+                  <path d="M470 200 H510"/>
+                  <path d="M690 200 H730"/>
+                </g>
+
+                <text x="44" y="356" font-size="12.5" font-weight="700" fill="#64748B">
+                  Built to scale research tasks while keeping output consistent for analytics.
+                </text>
+              </svg>
+            </div>
+            <figcaption>In-progress: bulk lookup powered by templates with standardized output formats.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="dm-section" id="ops-platform">
+        <h3 class="dm-h3">5) AI Ops Platform & Operational Workflows</h3>
+        <p class="dm-p">
+          This cluster provides reusable building blocks that connect insights, data sources, and execution into operational workflows —
+          including agent-based routing, vision data normalization, tagging, and taxonomy classification.
+        </p>
+
+        <div class="product-grid" aria-label="AI Ops products">
+          <article class="product-card">
+            <div class="product-head">
+              <div>
+                <h4 class="product-title">Solution Assistant (Tool Flow) <span class="dm-status dm-status--progress"><i></i>In progress</span></h4>
+                <p class="product-sub">
+                  Automatically analyzes requests, recommends the right workflow, and pushes execution to an ops workflow platform.
+                  Implemented as a 4-agent pipeline.
+                </p>
+              </div>
+            </div>
+
+            <div class="product-meta">
+              <span class="metric-chip"><span>Agents</span> 4</span>
+              <span class="metric-chip"><span>Goal</span> auto-routing</span>
+              <span class="metric-chip"><span>Output</span> workflow plan</span>
+            </div>
+
+            <ul class="dm-list">
+              <li><strong>Study Requirement</strong> → parse intent, constraints, scope</li>
+              <li><strong>DA & AI</strong> → connect data + produce insights</li>
+              <li><strong>Workflow Generator</strong> → build/compose workflow steps</li>
+              <li><strong>QA/QC</strong> → evaluate and suggest improvements</li>
+            </ul>
+          </article>
+
+          <article class="product-card">
+            <div class="product-head">
+              <div>
+                <h4 class="product-title">Vision Config Normalization <span class="dm-status dm-status--progress"><i></i>In progress</span></h4>
+                <p class="product-sub">
+                  Normalizes OCR/raw output using a configuration file: correct types, formats, structures, and merges back into the vision response.
+                </p>
+              </div>
+            </div>
+
+            <div class="product-meta">
+              <span class="metric-chip"><span>Input</span> config + vision_response</span>
+              <span class="metric-chip"><span>Output</span> standardized JSON</span>
+            </div>
+
+            <ul class="dm-list">
+              <li>Transform config/dataset → LLM normalize → parse/decompose → merge</li>
+              <li>Assign back to vision_response with consistent schema</li>
+              <li>Designed for downstream automation and validation</li>
+            </ul>
+          </article>
+
+          <article class="product-card">
+            <div class="product-head">
+              <div>
+                <h4 class="product-title">Insight → Solution Mapping <span class="dm-status dm-status--progress"><i></i>In progress</span></h4>
+                <p class="product-sub">
+                  Maps structured insights to recommended solutions using a knowledge base: object/attributes → inferred solutions.
+                </p>
+              </div>
+            </div>
+
+            <div class="product-meta">
+              <span class="metric-chip"><span>Recall</span> ~30%</span>
+              <span class="metric-chip"><span>Precision</span> &gt;80%</span>
+              <span class="metric-chip"><span>Method</span> object + attribute pairs</span>
+            </div>
+
+            <ul class="dm-list">
+              <li>Normalize object/attribute → (object, attribute_value)</li>
+              <li>Infer matching solution candidates from KB</li>
+              <li>Prioritize precision to reduce wrong recommendations</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="product-grid" aria-label="Tagging products">
+          <article class="product-card">
+            <div class="product-head">
+              <div>
+                <h4 class="product-title">Shop-name Tag Extraction <span class="dm-status dm-status--progress"><i></i>In progress</span></h4>
+                <p class="product-sub">
+                  Detects tags and tag values from <code>shop_name</code> (one shop → multiple tags; one tag → multiple values; comma-separated).
+                </p>
+              </div>
+            </div>
+
+            <div class="product-meta">
+              <span class="metric-chip"><span>Fields</span> 7/7</span>
+              <span class="metric-chip"><span>Accuracy</span> &gt;90%</span>
+              <span class="metric-chip"><span>Note</span> runtime improving</span>
+            </div>
+
+            <ul class="dm-list">
+              <li>Improved “production-based model” accuracy: <strong>22.85%</strong> → <strong>94.1%</strong></li>
+              <li>Improved “HQ/Branch” accuracy: <strong>66.7%</strong> → <strong>100%</strong></li>
+              <li>Current limitation: longer runtime</li>
+            </ul>
+          </article>
+
+          <article class="product-card">
+            <div class="product-head">
+              <div>
+                <h4 class="product-title">Smart Tagger <span class="dm-status dm-status--prod"><i></i>On prod (v1)</span></h4>
+                <p class="product-sub">
+                  Classifies products into a multi-level taxonomy and extracts attributes from product names.
+                  v2 is pending.
+                </p>
+              </div>
+            </div>
+
+            <div class="product-meta">
+              <span class="metric-chip"><span>Taxonomy</span> 10 / 153 / 1,759</span>
+              <span class="metric-chip"><span>Integration</span> DB ↔ model</span>
+              <span class="metric-chip"><span>Storage</span> fulfillment_os</span>
+            </div>
+
+            <ul class="dm-list">
+              <li>Sync products from orders → distinct product table → model inference → writeback to DB</li>
+              <li>Skip orders without products or names; still sync missing quantity/cancelled cases</li>
+              <li>Truncate long product names to 1,000 chars to keep pipelines stable</li>
+            </ul>
+          </article>
+
+          <figure class="dm-figure" aria-label="4-agent architecture">
+            <div class="figure-pad">
+              <svg viewBox="0 0 920 420" role="img" aria-label="Solution assistant 4-agent architecture">
+                <rect x="18" y="18" width="884" height="384" rx="22" fill="#FFFFFF" stroke="#E2E8F0"/>
+                <text x="44" y="66" font-size="18" font-weight="900" fill="#0F172A">Solution Assistant — 4 agents</text>
+                <text x="44" y="92" font-size="13" font-weight="700" fill="#64748B">From request understanding to workflow generation and QA</text>
+
+                <g fill="#F1F5F9" stroke="#E2E8F0">
+                  <rect x="70" y="150" width="190" height="90" rx="16"/>
+                  <rect x="290" y="150" width="190" height="90" rx="16"/>
+                  <rect x="510" y="150" width="190" height="90" rx="16"/>
+                  <rect x="730" y="150" width="120" height="90" rx="16"/>
+                </g>
+
+                <g font-size="14" fill="#0F172A" font-weight="900">
+                  <text x="92" y="184">Study Requirement</text>
+                  <text x="312" y="184">DA & AI</text>
+                  <text x="532" y="184">Workflow Generator</text>
+                  <text x="748" y="184">QA/QC</text>
+                </g>
+
+                <g font-size="13" fill="#334155" font-weight="700">
+                  <text x="92" y="208">intent · scope</text>
+                  <text x="312" y="208">data · insight</text>
+                  <text x="532" y="208">compose steps</text>
+                  <text x="748" y="208">score & refine</text>
+                </g>
+
+                <g stroke="#CBD5E1" stroke-width="2" fill="none">
+                  <path d="M260 195 H290"/>
+                  <path d="M480 195 H510"/>
+                  <path d="M700 195 H730"/>
+                </g>
+
+                <g>
+                  <rect x="70" y="270" width="780" height="90" rx="18" fill="url(#grad2)" stroke="#E2E8F0"/>
+                </g>
+
+                <defs>
+                  <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#EAF0F6"/>
+                    <stop offset="1" stop-color="#F8FAFC"/>
+                  </linearGradient>
+                </defs>
+
+                <text x="92" y="318" font-size="14" font-weight="900" fill="#0F172A">Output</text>
+                <text x="170" y="318" font-size="13" font-weight="700" fill="#334155">
+                  Workflow plan → push to ops platform for execution, monitoring, and iteration
+                </text>
+              </svg>
+            </div>
+            <figcaption>Agent-based orchestration to translate requests into executable workflows with quality checks.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="dm-section" id="roadmap">
+        <h3 class="dm-h3">6) Next steps</h3>
+        <div class="dm-grid-2">
+          <div class="dm-card">
+            <div class="dm-card-title">Near-term priorities</div>
+            <ul class="dm-list">
+              <li>Reduce “Unknown/Other” intents by extending coverage and adding clarification flows</li>
+              <li>Improve Insight → Solution <strong>recall</strong> while keeping precision high</li>
+              <li>Optimize runtime for shop-name tag extraction and add monitoring</li>
+              <li>Standardize evaluation and release criteria across all workflows</li>
+            </ul>
+          </div>
+
+          <div class="dm-card">
+            <div class="dm-card-title">What makes it scalable</div>
+            <ul class="dm-list">
+              <li>Reusable workflow templates and shared guardrails</li>
+              <li>Versioned intents / configs with traceable changes</li>
+              <li>Metrics-first monitoring: volume, fallback rate, error rate, precision/recall</li>
+              <li>Design for safe handover to humans in sensitive cases</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dm-cta">
+          <div class="dm-cta-text">
+            Want the full landing-page copy (headline + CTA + marketing tone) for this ecosystem?
+          </div>
+          <div class="dm-cta-actions">
+            <a class="back-btn" href="./index.html#contact">Contact me</a>
+            <a class="back-btn" href="#top">Back to top ↑</a>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- Back section (same as dashboards/datamart) -->
+    <section class="back-bottom">
+      <div class="wrap">
+        <a class="back-btn" href="./index.html">← Back to Portfolio</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="index.html#demo">Demo Gallery</a>
+          <a href="index.html#projects">Featured Projects</a>
+          <a href="index.html#awards">Awards</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <a href="index.html#projects">Dashboard Systems</a>
+          <a href="index.html#projects">Datamart Design</a>
+          <a href="index.html#projects">Business Insights</a>
+          <a href="index.html#projects">AI Analytics</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="index.html#about">About Me</a>
+          <a href="index.html#projects">Case Studies</a>
+          <a href="index.html#demo">Templates</a>
+          <a href="index.html#projects">Notes</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="index.html#contact">Work with me</a>
+          <a href="mailto:linhpi9999@gmail.com">Email support</a>
+          <a href="index.html#contact">FAQ</a>
+          <a class="to-top" href="#top">Back to top ↑</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html#about">Story</a>
+          <a href="index.html#projects">Portfolio</a>
+          <a href="index.html#awards">Recognition</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
+        <div class="footer-brandcol">
+          <div class="footer-logo">Linh</div>
+          <p class="footer-desc">
+            Data Analytics Manager — dashboards, datamarts, business insights &amp; AI-powered analytics.
+            I build clean, scalable data products that help teams move faster and decide with confidence.
+          </p>
+          <div class="footer-quick">
+            <a class="footer-pill" href="index.html#projects">View work</a>
+            <a class="footer-pill footer-pill--ghost" href="index.html#contact">Let’s talk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div class="footer-social" aria-label="Social links">
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path
+                d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6v6.3h-4V16c0-1.2 0-2.8-1.7-2.8S13 14.6 13 16v5h-4V9z" />
+            </svg>
+          </a>
+          <a href="https://github.com/yourprofile" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 .5C5.7.5.6 5.7.6 12.2c0 5.2 3.4 9.6 8.1 11.2.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.9 2.1 3.6 1.5.1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.4-2.3 1.1-3.1-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 1.2.9-.3 1.8-.4 2.7-.4.9 0 1.8.1 2.7.4 2.1-1.4 3-1.2 3-1.2.6 1.6.2 2.8.1 3.1.7.8 1.1 1.8 1.1 3.1 0 4.6-2.7 5.6-5.3 5.9.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.7-1.6 8.1-6 8.1-11.2C23.4 5.7 18.3.5 12 .5z" />
+            </svg>
+          </a>
+          <a href="mailto:linhpi9999@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16v16H4z"></path>
+              <path d="m22 6-10 7L2 6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer-legal">
+          <a href="#" class="legal-link">Terms of Use</a>
+          <a href="#" class="legal-link">Privacy Policy</a>
+          <span class="copyright">© <span id="year"></span> Linh</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mobile nav
+    (function () {
+      const btn = document.querySelector('.menu-btn');
+      const nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+
+      btn.addEventListener('click', function () {
+        const open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      nav.addEventListener('click', function (e) {
+        const t = e.target;
+        if (t && t.tagName === 'A' && nav.classList.contains('is-open')) {
+          nav.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
