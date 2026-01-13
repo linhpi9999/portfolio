@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
   <meta name="color-scheme" content="light" />
   <title>Infographics</title>
 
-  <!-- Dùng chung style với index để header/footer giống hệt dashboards -->
+  <!-- Shared styles with index so the header/footer match dashboards -->
   <link rel="stylesheet" href="assets/css/index.css" />
   <link rel="stylesheet" href="assets/css/infographics.css" />
 </head>
@@ -15,7 +15,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header: giữ nguyên y hệt dashboards -->
+  <!-- Header: same as dashboards -->
   <header class="site-header" role="banner">
     <div class="header-inner">
       <div class="header-left">
@@ -62,19 +62,19 @@
     <!-- Hero + controls (same structure as dashboards) -->
     <section class="masthead">
       <div class="wrap masthead-inner">
-        <h1>Chọn infographic bạn muốn xem</h1>
+        <h1>Choose an infographic to view</h1>
         <p class="lead">
-          Bộ sưu tập infographics theo hướng <strong>storytelling</strong> — bố cục gọn, “one-slide story”, tối ưu cho slide &amp; print.
+          A storytelling-driven infographic collection — clean layouts, “one-slide stories”, optimized for slides &amp; print.
         </p>
 
-        <div aria-label="Tìm kiếm và sắp xếp" class="controls" role="region">
+        <div aria-label="Search and sort" class="controls" role="region">
           <label class="search" for="q">
             <span aria-hidden="true" class="search-icon">⌕</span>
-            <input autocomplete="off" id="q" placeholder="Tìm theo tên hoặc từ khoá…" type="search" />
+            <input autocomplete="off" id="q" placeholder="Search by name or keyword…" type="search" />
           </label>
         </div>
 
-        <div class="hint">Gợi ý: report, finance, branding</div>
+        <div class="hint">Tip: report, finance, branding</div>
       </div>
     </section>
 
@@ -82,13 +82,13 @@
     <section class="section-head">
       <div class="wrap head-inner">
         <div class="head-left">
-          <h2>Bộ sưu tập infographics</h2>
+          <h2>Infographics gallery</h2>
           <div aria-live="polite" class="count" id="count"></div>
         </div>
 
         <div class="sort">
-          <span class="sort-label">Sắp xếp</span>
-          <select aria-label="Sắp xếp infographics" id="sort">
+          <span class="sort-label">Sort</span>
+          <select aria-label="Sort infographics" id="sort">
             <option selected value="recommended">Recommended</option>
             <option value="az">A → Z</option>
             <option value="za">Z → A</option>
@@ -107,7 +107,7 @@
           data-sub="Report / Marketing">
           <span class="media-fallback" aria-hidden="true">
             <span class="media-icon">▦</span>
-            <span class="media-text">Preview đang cập nhật</span>
+            <span class="media-text">Preview coming soon</span>
           </span>
           <img loading="lazy" src="assets/images/infographic-tmg-fv-1.png" alt="M&A Infographic" />
         </button>
@@ -115,11 +115,11 @@
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">M&A Infographic</h3>
-            <span class="badge">Report</span>
+            <span class="badge">Infographic</span>
           </div>
-          <p class="card-desc">Bố cục theo hướng “one-slide story”, tối ưu cho thuyết trình và gửi email nội bộ.</p>
+          <p class="card-desc">Overview of M&A activity—trends, drivers, and key financial impacts.</p>
           <div class="card-tags" aria-label="Tags">
-            <span class="chip">Storytelling</span><span class="chip">Layout</span><span class="chip">Presentation</span>
+            <span class="chip">Finance</span><span class="chip">Model</span><span class="chip">Exhibition</span>
           </div>
         </div>
       </article>
@@ -131,7 +131,7 @@
           data-sub="Branding">
           <span class="media-fallback" aria-hidden="true">
             <span class="media-icon">▦</span>
-            <span class="media-text">Preview đang cập nhật</span>
+            <span class="media-text">Preview coming soon</span>
           </span>
           <img loading="lazy" src="assets/images/infographic-tima.png" alt="P2P Lending Infographic" />
         </button>
@@ -139,11 +139,11 @@
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">P2P Lending Infographic</h3>
-            <span class="badge">Branding</span>
+            <span class="badge">Infographic</span>
           </div>
-          <p class="card-desc">Tổng hợp hệ logo/variation theo format dễ review, phù hợp handoff cho team.</p>
+          <p class="card-desc">Illustrates the P2P lending model, cash flows, benefits, and risks for each party.</p>
           <div class="card-tags" aria-label="Tags">
-            <span class="chip">Branding</span><span class="chip">System</span><span class="chip">Handoff</span>
+            <span class="chip">Finance</span><span class="chip">Technology</span><span class="chip">Exhibition</span>
           </div>
         </div>
       </article>
@@ -155,7 +155,7 @@
           data-sub="Finance / Report">
           <span class="media-fallback" aria-hidden="true">
             <span class="media-icon">▦</span>
-            <span class="media-text">Preview đang cập nhật</span>
+            <span class="media-text">Preview coming soon</span>
           </span>
           <img loading="lazy" src="assets/images/infographic-tmg-fv-2.png" alt="TMG-FV Infographic" />
         </button>
@@ -163,11 +163,35 @@
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">TMG-FV Infographic</h3>
-            <span class="badge">Finance</span>
+            <span class="badge">Infographic</span>
           </div>
-          <p class="card-desc">Tóm tắt KPI tài chính theo cấu trúc “headline → drivers → actions”.</p>
+          <p class="card-desc">Analyzes the TMG–FV M&A case and the strategic value created.</p>
           <div class="card-tags" aria-label="Tags">
-            <span class="chip">Finance</span><span class="chip">KPI</span><span class="chip">Executive</span>
+            <span class="chip">Finance</span><span class="chip">Healthcare Services</span><span class="chip">Exhibition</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-tags="finance report kpi executive summary storytelling">
+        <button class="card-media" type="button"
+          data-src="assets/images/infographic-fb-whatsapp_page-0001.jpg"
+          data-title="TMG-FV Infographic"
+          data-sub="Finance / Report">
+          <span class="media-fallback" aria-hidden="true">
+            <span class="media-icon">▦</span>
+            <span class="media-text">Preview coming soon</span>
+          </span>
+          <img loading="lazy" src="assets/images/infographic-fb-whatsapp_page-0001.jpg" alt="Facebook-Whatsapp Infographic" />
+        </button>
+
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="card-title">Facebook-Whatsapp Infographic</h3>
+            <span class="badge">Infographic</span>
+          </div>
+          <p class="card-desc">Shows Meta’s ecosystem integration strategy and how user data is leveraged.</p>
+          <div class="card-tags" aria-label="Tags">
+            <span class="chip">Finance</span><span class="chip">Social Network</span><span class="chip">Exhibition</span>
           </div>
         </div>
       </article>
@@ -179,7 +203,7 @@
           data-sub="Finance / Report">
           <span class="media-fallback" aria-hidden="true">
             <span class="media-icon">▦</span>
-            <span class="media-text">Preview đang cập nhật</span>
+            <span class="media-text">Preview coming soon</span>
           </span>
           <img loading="lazy" src="assets/images/slide-fsj.png" alt="slide-fsj" />
         </button>
@@ -187,11 +211,11 @@
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-title">Slide Financial Secrecy Jurisdictions (FSJ)</h3>
-            <span class="badge">Finance</span>
+            <span class="badge">Slide</span>
           </div>
-          <p class="card-desc">Tóm tắt KPI tài chính theo cấu trúc “headline → drivers → actions”.</p>
+          <p class="card-desc">Presents research on high financial-secrecy jurisdictions and transparency risks.</p>
           <div class="card-tags" aria-label="Tags">
-            <span class="chip">Finance</span><span class="chip">KPI</span><span class="chip">Executive</span>
+            <span class="chip">Finance</span><span class="chip">Presentation</span>
           </div>
         </div>
       </article>
@@ -203,43 +227,19 @@
           data-sub="Report">
           <span class="media-fallback" aria-hidden="true">
             <span class="media-icon">▦</span>
-            <span class="media-text">Preview đang cập nhật</span>
+            <span class="media-text">Preview coming soon</span>
           </span>
-          <img loading="lazy" src="assets/images/slide-mbb.png" alt="Silde MBB" />
+          <img loading="lazy" src="assets/images/slide-mbb.png" alt="Slide MBB" />
         </button>
 
         <div class="card-body">
           <div class="card-top">
-            <h3 class="card-title">Ops Weekly Digest</h3>
-            <span class="badge">Report</span>
+            <h3 class="card-title">Military Bank (MBB) Slide</h3>
+            <span class="badge">Slide</span>
           </div>
-          <p class="card-desc">Digest 1 trang: SLA, throughput, issue highlights, action list.</p>
+          <p class="card-desc">Equity investment analysis for Military Bank (MBB) stock.</p>
           <div class="card-tags" aria-label="Tags">
-            <span class="chip">Ops</span><span class="chip">Weekly</span><span class="chip">Digest</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="card" data-tags="branding brand guideline typography color system">
-        <button class="card-media" type="button"
-          data-src="assets/images/infographic-fb-whatsapp.pdf"
-          data-title="Brand Guideline One-pager"
-          data-sub="Branding">
-          <span class="media-fallback" aria-hidden="true">
-            <span class="media-icon">▦</span>
-            <span class="media-text">Preview đang cập nhật</span>
-          </span>
-          <img loading="lazy" src="assets/images/infographic-fb-whatsapp.pdf" alt="Brand Guideline One-pager" />
-        </button>
-
-        <div class="card-body">
-          <div class="card-top">
-            <h3 class="card-title">Brand Guideline One-pager</h3>
-            <span class="badge">Branding</span>
-          </div>
-          <p class="card-desc">One-pager guideline: màu, type scale, spacing rules, do/don’t.</p>
-          <div class="card-tags" aria-label="Tags">
-            <span class="chip">Guideline</span><span class="chip">Typography</span><span class="chip">System</span>
+            <span class="chip">Bank</span><span class="chip">Investment</span><span class="chip">Presentation</span>
           </div>
         </div>
       </article>
@@ -248,13 +248,13 @@
 
     <section class="back-bottom">
       <div class="wrap">
-        <a class="back-btn" href="./index.html">← Quay lại Portfolio</a>
+        <a class="back-btn" href="./index.html">← Back to Portfolio</a>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer: giữ nguyên y hệt dashboards -->
+  <!-- Footer: same as dashboards -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-top">
       <div class="container footer-grid">
@@ -437,7 +437,7 @@
       const byTitle = (a, b) => {
         const ta = (a.querySelector('.card-title')?.textContent || '').trim().toLowerCase();
         const tb = (b.querySelector('.card-title')?.textContent || '').trim().toLowerCase();
-        return ta.localeCompare(tb, 'vi');
+        return ta.localeCompare(tb, 'en');
       };
 
       if (mode === 'az') visible.sort(byTitle);
