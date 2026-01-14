@@ -1,191 +1,381 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Datamart Case Study — Lakehouse + Apache Iceberg</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
+  <title>Datamart — Lakehouse + Apache Iceberg</title>
 
-  <link rel="stylesheet" href="assets/css/datamart.css">
+  <!-- Shared styles with index so header/footer match exactly -->
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <!-- Datamart page styles (aligned to dashboards layout) -->
+  <link rel="stylesheet" href="assets/css/datamart.css" />
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <a class="back" href="./index.html">← Back to Portfolio</a>
-      <div class="brand">
-        <span class="dot"></span>
-        <span>Datamart</span>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-left">
+        <a class="brand" href="index.html#top" aria-label="Go to top">Linh π</a>
+
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+          <a class="nav-link" href="index.html#about">About</a>
+          <a class="nav-link" href="index.html#demo">Gallery</a>
+          <a class="nav-link" href="index.html#projects">Projects</a>
+          <a class="nav-link" href="index.html#awards">Awards</a>
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <button class="icon-btn" type="button" aria-label="Language">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M2 12h20"></path>
+            <path d="M12 2a15 15 0 0 1 0 20"></path>
+            <path d="M12 2a15 15 0 0 0 0 20"></path>
+          </svg>
+        </button>
+
+        <a class="header-link" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn btn--small btn--pill" href="index.html#contact">Contact me</a>
+
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 6h16"></path>
+            <path d="M4 12h16"></path>
+            <path d="M4 18h16"></path>
+          </svg>
+        </button>
       </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div>
-        <h1>Datamart Case Study — Lakehouse Architecture with Apache Iceberg</h1>
-        <p>
-          Mục tiêu của dự án là xây dựng một nền tảng dữ liệu thống nhất, có khả năng mở rộng và tối ưu cho analytics/BI.
-          Giải pháp sử dụng <strong>Lakehouse</strong> + <strong>Apache Iceberg</strong> nhằm đảm bảo truy vấn ổn định,
-          quản trị dữ liệu tốt và hỗ trợ cả batch lẫn streaming.
+  <main id="main">
+    <section id="top"></section>
+
+    <!-- Masthead (same structure as dashboards) -->
+    <section class="masthead dm-masthead">
+      <div class="wrap masthead-inner">
+
+        <h1>Datamart: Lakehouse Architecture with Apache Iceberg</h1>
+        <p class="lead">
+          A case study on how I design <strong>Gold Datamarts</strong> by domain/KPI, standardize the data model,
+          and optimize query performance on a <strong>Lakehouse</strong> + <strong>Apache Iceberg</strong>
+          architecture (supporting both batch and near‑real-time).
         </p>
 
-        <div class="pills">
-          <span class="pill">Lakehouse</span>
-          <span class="pill">Apache Iceberg</span>
-          <span class="pill">Spark / Trino</span>
-          <span class="pill">Data Modeling</span>
-          <span class="pill">Data Quality</span>
-        </div>
-      </div>
-
-      <aside class="kpis">
-        <h3>At a glance</h3>
-        <div class="kpi-grid">
-          <div class="kpi">
-            <div class="label">Role</div>
-            <div class="value">Analytics Engineer</div>
-          </div>
-          <div class="kpi">
-            <div class="label">Scope</div>
-            <div class="value">Gold Datamarts</div>
-          </div>
-          <div class="kpi">
-            <div class="label">Key focus</div>
-            <div class="value">Modeling + Performance</div>
-          </div>
-          <div class="kpi">
-            <div class="label">Consumers</div>
-            <div class="value">BI / Realtime / ML</div>
-          </div>
-        </div>
-
-        <div class="badges">
-          <span class="badge ok">Consistency</span>
-          <span class="badge">Scalability</span>
-          <span class="badge warn">Low Latency</span>
-        </div>
-      </aside>
-    </section>
-
-    <section class="section">
-      <h2>1) Project overview</h2>
-      <p>
-        Dự án Datamart giúp chuẩn hoá luồng dữ liệu từ source → landing → bronze/silver → gold (datamarts),
-        phục vụ dashboard/analytics với tiêu chí: <strong>đúng</strong>, <strong>nhanh</strong>, <strong>ổn định</strong>.
-      </p>
-      <div class="two-col" style="margin-top:14px">
-        <div class="card">
-          <h3>Problems we solved</h3>
-          <ul>
-            <li>Logic marts rời rạc, khó kiểm soát chất lượng</li>
-            <li>Query chậm do partition/format chưa tối ưu</li>
-            <li>Thiếu chuẩn hoá schema & layer hoá dữ liệu</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>What we built</h3>
-          <ul>
-            <li>Gold datamarts theo business domain</li>
-            <li>Chuẩn hoá mô hình (facts/dims), KPI definitions</li>
-            <li>Monitoring/validation cho chất lượng dữ liệu</li>
-          </ul>
+        <div class="controls dm-actions" role="region" aria-label="Quick actions">
+          <a class="dm-action" href="#overview">Overview</a>
+          <a class="dm-action" href="#architecture">Architecture</a>
+          <a class="dm-action" href="#dataflow">Dataflow</a>
+          <a class="dm-action" href="#deliverables">Deliverables</a>
+          <a class="dm-action dm-action--primary" href="./dashboards.html">View Dashboards →</a>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>2) Architecture overview</h2>
-      <p>
-        Kiến trúc gồm Lake storage + file format + table format (Iceberg) + compute engines (Spark/Trino) + catalog.
-        Thiết kế này giúp quản trị phiên bản bảng, schema evolution và tối ưu truy vấn.
-      </p>
+    <!-- Section head (same structure as dashboards) -->
 
-      <figure class="figure" style="margin-top:14px">
-        <img src="assets/images/iceberg.png" alt="Lakehouse layered architecture with Apache Iceberg">
-        <figcaption>Lakehouse stack: storage → formats → Iceberg tables → compute engines → catalog → BI/ML consumption.</figcaption>
-      </figure>
-    </section>
 
-    <section class="section">
-      <h2>3) Dataflow: source → gold layer</h2>
-      <div class="two-col" style="margin-top:14px">
-        <div class="card">
-          <h3>Layering strategy</h3>
-          <ul>
-            <li><strong>Landing</strong>: raw ingestion, giữ nguyên cấu trúc</li>
-            <li><strong>Bronze</strong>: chuẩn hoá schema tối thiểu</li>
-            <li><strong>Silver</strong>: clean, dedupe, consolidate</li>
-            <li><strong>Gold</strong>: datamarts theo use-case/KPI</li>
-          </ul>
+    <!-- Content -->
+    <section class="wrap dm-content">
+      <section class="dm-section" id="overview">
+        <h3 class="dm-h3">1) Project overview</h3>
+        <p class="dm-p">
+          This Datamart project focuses on standardizing the data flow from <em>source → landing → bronze/silver → gold</em>
+          to power dashboards/analytics with three goals: <strong>correct</strong>, <strong>fast</strong>, and <strong>reliable</strong>.
+          The gold layer is designed by business domain, with consistent KPI definitions and full traceability.
+        </p>
+
+        <div class="dm-grid-2">
+          <div class="dm-card">
+            <div class="dm-card-title">Problems we solved</div>
+            <ul class="dm-list">
+              <li>Fragmented mart logic; KPIs inconsistent across reports</li>
+              <li>Slow queries due to suboptimal partitioning/formats and missing the right aggregations</li>
+              <li>Lack of standardized schema and layered data model, making debugging/lineage difficult</li>
+            </ul>
+          </div>
+
+          <div class="dm-card">
+            <div class="dm-card-title">What we built</div>
+            <ul class="dm-list">
+              <li>Domain-based gold datamarts (facts/dims) with clearly defined grain</li>
+              <li>Standardized KPI definitions, business rules, mappings, and data contracts</li>
+              <li>Monitoring/validation for data quality with anomaly alerts</li>
+            </ul>
+          </div>
         </div>
-        <figure class="figure">
-          <img src="assets/images/Architecture.png" alt="Dataflow from source to gold layer">
-          <figcaption>Pipeline layering để đảm bảo traceability và chất lượng dữ liệu.</figcaption>
+      </section>
+
+      <section class="dm-section" id="architecture">
+        <h3 class="dm-h3">2) Architecture overview</h3>
+        <p class="dm-p">
+          The architecture combines lake storage + file formats + a table format (<strong>Iceberg</strong>) + compute engines
+          (Spark/Trino) + a catalog. This design supports <strong>schema evolution</strong>, snapshot/version management,
+          and query optimization via partitioning + metadata pruning.
+        </p>
+
+        <figure class="dm-figure">
+          <img src="assets/images/iceberg.png" alt="Lakehouse layered architecture with Apache Iceberg" loading="lazy">
+          <figcaption>Lakehouse stack: storage → formats → Iceberg tables → compute engines → catalog → BI/ML consumption.</figcaption>
         </figure>
-      </div>
+      </section>
+
+      <section class="dm-section" id="dataflow">
+        <h3 class="dm-h3">3) Dataflow: source → gold layer</h3>
+        <div class="dm-grid-2">
+          <div class="dm-card">
+            <div class="dm-card-title">Layering strategy</div>
+            <ul class="dm-list">
+              <li><strong>Landing</strong>: raw ingestion, preserving the original structure</li>
+              <li><strong>Bronze</strong>: minimal schema standardization + naming conventions</li>
+              <li><strong>Silver</strong>: clean, dedupe, consolidate (business keys)</li>
+              <li><strong>Gold</strong>: datamarts theo use-case/KPI + aggregates</li>
+            </ul>
+          </div>
+
+          <figure class="dm-figure">
+            <img src="assets/images/Architecture.png" alt="Dataflow from source to gold layer" loading="lazy">
+            <figcaption>Layered pipelines improve traceability and quality control at each layer.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="dm-section" id="deliverables">
+        <h3 class="dm-h3">4) Roles & deliverables</h3>
+        <div class="dm-grid-2">
+          <div class="dm-card">
+            <div class="dm-card-title">Datamart design</div>
+            <ul class="dm-list">
+              <li>Translate business needs → logical model (facts/dims), and define grain</li>
+              <li>Define KPIs, business rules, mappings, and documentation</li>
+              <li>Design partitioning/aggregation to optimize query performance & cost</li>
+            </ul>
+          </div>
+
+          <div class="dm-card">
+            <div class="dm-card-title">Quality & performance</div>
+            <ul class="dm-list">
+              <li>Review/optimize marts: partition, join patterns, compute cost</li>
+              <li>Data checks: completeness, uniqueness, freshness + anomaly signals</li>
+              <li>Set up metric contracts to reduce “definition drift” across teams</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="dm-section" id="impact">
+        <h3 class="dm-h3">5) Impact</h3>
+        <p class="dm-p">
+          Focused on operational stability and improving the quality of analytics delivery.
+        </p>
+
+        <div class="dm-grid-2">
+          <div class="dm-card">
+            <div class="dm-card-title">Business outcomes</div>
+            <ul class="dm-list">
+              <li>Reduced refresh latency and improved metric reliability</li>
+              <li>Consistent KPIs across multiple dashboards/reports</li>
+              <li>Enable use-cases: BI, near-realtime, ML pipelines</li>
+            </ul>
+          </div>
+
+          <div class="dm-card">
+            <div class="dm-card-title">Operational outcomes</div>
+            <ul class="dm-list">
+              <li>Easier debugging thanks to clear layering and lineage</li>
+              <li>Standardized mart templates for faster onboarding</li>
+              <li>Fewer “data drift” issues thanks to checks and alerting</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="dm-section" id="stack">
+        <h3 class="dm-h3">6) Tech stack</h3>
+        <div class="dm-grid-2">
+          <div class="dm-card">
+            <div class="dm-card-title">Core components</div>
+            <ul class="dm-list">
+              <li>Storage: S3 / Azure / GCS</li>
+              <li>Formats: Parquet / Avro</li>
+              <li>Table format: Apache Iceberg</li>
+              <li>Engines: Spark / Trino</li>
+            </ul>
+          </div>
+
+          <div class="dm-card">
+            <div class="dm-card-title">Governance & reliability</div>
+            <ul class="dm-list">
+              <li>Catalog: Hive / Glue / Nessie</li>
+              <li>Orchestration: Airflow / Dagster (depending on your stack)</li>
+              <li>Quality: expectations + alerts</li>
+              <li>Docs: metric definitions + data contracts</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dm-cta">
+          <div class="dm-cta-text">
+            Reach out for more details.
+          </div>
+          <div class="dm-cta-actions">
+            <a class="back-btn" href="./index.html#contact">Contact me</a>
+            <a class="back-btn" href="./dashboards.html">View Dashboards →</a>
+          </div>
+        </div>
+      </section>
     </section>
 
-    <section class="section">
-      <h2>4) My role & deliverables</h2>
-      <div class="two-col" style="margin-top:14px">
-        <div class="card">
-          <h3>Datamart design</h3>
-          <ul>
-            <li>Translate business needs → logical model (facts/dims)</li>
-            <li>Định nghĩa KPI, grain, business rules, mapping</li>
-            <li>Thiết kế partitioning/aggregation để tối ưu query</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Quality & performance</h3>
-          <ul>
-            <li>Review/optimize marts cũ: logic, partition, compute cost</li>
-            <li>Data checks: completeness, uniqueness, anomaly signals</li>
-            <li>Documentation: metric definitions & data contracts</li>
-          </ul>
-        </div>
+    <!-- Back section (same as dashboards) -->
+    <section class="back-bottom">
+      <div class="wrap">
+        <a class="back-btn" href="./index.html">← Back to Portfolio</a>
       </div>
     </section>
-
-    <section class="section">
-      <h2>5) Impact</h2>
-      <p>
-        Kết quả chính tập trung vào ổn định vận hành và nâng chất lượng phục vụ analytics.
-        (Bạn có thể thay bằng số liệu thật nếu muốn “wow” hơn.)
-      </p>
-      <div class="two-col" style="margin-top:14px">
-        <div class="card">
-          <h3>Business outcomes</h3>
-          <ul>
-            <li>Giảm độ trễ refresh & tăng độ tin cậy số liệu</li>
-            <li>KPI nhất quán giữa nhiều dashboard/report</li>
-            <li>Enable use-cases: BI, realtime, ML pipelines</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Tech stack</h3>
-          <ul>
-            <li>Storage: S3/Azure/GCS</li>
-            <li>Formats: Parquet/Avro</li>
-            <li>Table format: Apache Iceberg</li>
-            <li>Engines: Spark/Trino</li>
-            <li>Catalog: Hive/Glue/Nessie</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        <div class="hint">
-          Liên hệ với tôi ngay.png</code>.
-        </div>
-        <div class="cta">
-          <a class="btn" href="./index.html">← Back</a>
-          <a class="btn primary" href="./dashboards.html">View Dashboards →</a>
-        </div>
-      </div>
-    </footer>
   </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="index.html#demo">Demo Gallery</a>
+          <a href="index.html#projects">Featured Projects</a>
+          <a href="index.html#awards">Awards</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <a href="index.html#projects">Dashboard Systems</a>
+          <a href="index.html#projects">Datamart Design</a>
+          <a href="index.html#projects">Business Insights</a>
+          <a href="index.html#projects">AI Analytics</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="index.html#about">About Me</a>
+          <a href="index.html#projects">Case Studies</a>
+          <a href="index.html#demo">Templates</a>
+          <a href="index.html#projects">Notes</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="index.html#contact">Work with me</a>
+          <a href="mailto:linhpi9999@gmail.com">Email support</a>
+          <a href="index.html#contact">FAQ</a>
+          <a class="to-top" href="#top">Back to top ↑</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html#about">Story</a>
+          <a href="index.html#projects">Portfolio</a>
+          <a href="index.html#awards">Recognition</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
+        <div class="footer-brandcol">
+          <div class="footer-logo">Linh</div>
+          <p class="footer-desc">
+            Data Analytics Manager — dashboards, datamarts, business insights &amp; AI-powered analytics.
+            I build clean, scalable data products that help teams move faster and decide with confidence.
+          </p>
+          <div class="footer-quick">
+            <a class="footer-pill" href="index.html#projects">View work</a>
+            <a class="footer-pill footer-pill--ghost" href="index.html#contact">Let’s talk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div class="footer-social" aria-label="Social links">
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path
+                d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6v6.3h-4V16c0-1.2 0-2.8-1.7-2.8S13 14.6 13 16v5h-4V9z" />
+            </svg>
+          </a>
+          <a href="https://github.com/yourprofile" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 .5C5.7.5.6 5.7.6 12.2c0 5.2 3.4 9.6 8.1 11.2.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.9 2.1 3.6 1.5.1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.4-2.3 1.1-3.1-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 1.2.9-.3 1.8-.4 2.7-.4.9 0 1.8.1 2.7.4 2.1-1.4 3-1.2 3-1.2.6 1.6.2 2.8.1 3.1.7.8 1.1 1.8 1.1 3.1 0 4.6-2.7 5.6-5.3 5.9.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.7-1.6 8.1-6 8.1-11.2C23.4 5.7 18.3.5 12 .5z" />
+            </svg>
+          </a>
+          <a href="mailto:linhpi9999@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16v16H4z"></path>
+              <path d="m22 6-10 7L2 6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer-legal">
+          <a href="#" class="legal-link">Terms of Use</a>
+          <a href="#" class="legal-link">Privacy Policy</a>
+          <span class="copyright">© <span id="year"></span> Linh</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mobile nav
+    (function () {
+      const btn = document.querySelector('.menu-btn');
+      const nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+
+      btn.addEventListener('click', function () {
+        const open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      nav.addEventListener('click', function (e) {
+        const t = e.target;
+        if (t && t.tagName === 'A' && nav.classList.contains('is-open')) {
+          nav.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    // jump-to section
+    (function () {
+      const sel = document.getElementById('jump');
+      if (!sel) return;
+
+      const go = (hash) => {
+        const el = document.querySelector(hash);
+        if (!el) return;
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      };
+
+      sel.addEventListener('change', () => go(sel.value));
+
+      // if landed with hash -> sync select
+      if (location.hash) {
+        const opt = Array.from(sel.options).find(o => o.value === location.hash);
+        if (opt) sel.value = location.hash;
+      }
+    })();
+  </script>
 </body>
 </html>
