@@ -393,6 +393,19 @@ section.container:first-of-type{ border-top: none; }
   font-size: 14px;
   color: var(--muted);
 }
+.gallery-scroll{
+  display:flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.gallery-scroll .card{
+  flex: 0 0 auto;
+  width: clamp(260px, 32vw, 360px);
+  scroll-snap-align: start;
+}
 
 /* ===== CONTACT ===== */
 .contact{
