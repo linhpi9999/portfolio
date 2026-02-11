@@ -840,3 +840,99 @@ section[id], #top{ scroll-margin-top: 92px; }
     grid-template-columns: 1fr;
   }
 }
+
+/* =====================
+   ✨ Premium Micro-interactions
+   (performance-friendly + accessible)
+   ===================== */
+
+/* Top scroll progress */
+.scroll-progress{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 2000;
+  pointer-events: none;
+  background: transparent;
+}
+.scroll-progress__bar{
+  display:block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 18px rgba(56,189,248,.35);
+  transform-origin: left;
+}
+
+/* Reveal on scroll */
+.reveal{
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth highlight for active nav link */
+.nav-link.is-active{
+  background: rgba(56,189,248,.14);
+  color: var(--primary);
+  opacity: 1;
+}
+
+/* Hero: animated aura blobs */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:-20%;
+  background:
+    radial-gradient(450px 280px at 18% 30%, rgba(56,189,248,.22), transparent 60%),
+    radial-gradient(520px 320px at 78% 18%, rgba(79,70,229,.18), transparent 62%),
+    radial-gradient(520px 360px at 60% 86%, rgba(56,189,248,.12), transparent 65%);
+  filter: blur(10px);
+  opacity: .9;
+  mix-blend-mode: multiply;
+  animation: heroFloat 14s ease-in-out infinite;
+  pointer-events:none;
+  z-index:0;
+}
+@keyframes heroFloat{
+  0%,100%{ transform: translate3d(0,0,0) scale(1); }
+  50%{ transform: translate3d(2%, -1%, 0) scale(1.02); }
+}
+
+/* Card tilt polish (JS adds CSS vars) */
+.card, .edu-card, .contact-card{
+  transform-style: preserve-3d;
+}
+.tilt{
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--ty, 0px));
+}
+.tilt .card-img{
+  transform: translateZ(16px);
+}
+
+/* Soft cursor spotlight (JS updates --mx/--my) */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events:none;
+  z-index: 0;
+  background: radial-gradient(500px 380px at var(--mx, 50%) var(--my, 20%), rgba(56,189,248,.10), transparent 55%);
+  opacity: .9;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  .reveal{ opacity: 1; transform: none; transition: none; }
+  .hero::after{ animation: none; }
+  .tilt{ transform: none !important; }
+  .scroll-progress__bar{ transition: none; }
+}

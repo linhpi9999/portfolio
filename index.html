@@ -49,6 +49,9 @@
       </div>
     </div>
   </header>
+<div class="scroll-progress" aria-hidden="true">
+  <span class="scroll-progress__bar"></span>
+</div>
 
   <main id="main">
     <section class="hero" id="top">
@@ -359,30 +362,7 @@
       </div>
     </div>
 
-    <script>
-      // year
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // mobile nav
-      (function(){
-        const btn = document.querySelector('.menu-btn');
-        const nav = document.getElementById('primary-nav');
-        if(!btn || !nav) return;
-
-        btn.addEventListener('click', function(){
-          const open = nav.classList.toggle('is-open');
-          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-
-        nav.addEventListener('click', function(e){
-          const t = e.target;
-          if(t && t.tagName === 'A' && nav.classList.contains('is-open')){
-            nav.classList.remove('is-open');
-            btn.setAttribute('aria-expanded', 'false');
-          }
-        });
-      })();
-    </script>
+    <script src="assets/js/index.js" defer></script>
   </footer>
 </body>
 </html>
